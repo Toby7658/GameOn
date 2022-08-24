@@ -1,5 +1,10 @@
+var rocketShip = new Image();
+var alienGirl = new Image();
+var laserGun = new Image();
 
-
+rocketShip.src = '';
+alienGirl.src = '';
+laserGun.src = '';
 
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
@@ -14,3 +19,4 @@ function gameLoop() {
 }
 
 setInterval(gameLoop, 1000 / 60);
+
