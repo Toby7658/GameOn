@@ -13,24 +13,24 @@
 </head>
 
 <body onload="startGame()">
-    <h1>Game On</h1>
+    <h1 class="header">Game On</h1>
 
     <span class="controls">
         <div>Move</div>
         <div>Arrow Keys</div>
         <div>Shoot</div>
         <div>Space bar</div>
-      </span>
-      
-    <canvas id="game">
-       
-    </canvas>
+    </span>
+
+    <canvas id="game"></canvas>
 
     <audio id="music"></audio>
-    
-    <img class="rocketship" src="assets/images/shipimage.png" alt="an image of a rocketship">
-    <img class="aliengirl" src="assets/images/alienimage.gif" alt="an image of an aliengirl">
-    <img class="lasergun" src="assets/images/bulletimage.png" alt="an image of a laser">
+
+    <div class="aliengirl"></div>
+
+    <div id="rocketship"></div>
+
+    <div id="score">0</div>
 
     <script src="assets/js/game.js" type="text">
 
