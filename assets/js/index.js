@@ -8,10 +8,7 @@ canvas.height = innerHeight;
 // code to create the spaceship
 class Player {
     constructor() {
-        this.position = {
-            x: 200,
-            y: 200
-        }
+
         // code to create movement for spaceship
         this.velocity = {
             x: 0,
@@ -22,29 +19,60 @@ class Player {
         const image = new Image()
         image.src = '/assets/images/shipimage.png'
         image.onload = () => {
-            this.image = image;
-            this.width = image.width;
-            this.height = image.height;
-}
-        
+            const scale = 0.15
+            this.image = image
+            this.width = image.width * scale
+            this.height = image.height * scale
+            this.position = {
+                x: canvas.width / 2 - this.width / 2,
+                y: canvas.height - this.height - 20
+            }
+        }
+
     }
     draw() {
         // c.fillStyle = 'red';
         // c.fillRect(this.position.x, this.position.y, 
         // this.width, this.height)
-        if (this.image)
+
         c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height)
     }
+}
 
+update() {
+if (this.image) {
+    this.draw()
+    this.position.x += this.velocity.x
+}
 }
 
 const player = new Player()
-player.draw()
+
 
 // code to loop animation over and over
 function animate() {
     requestAnimationFrame(animate)
     c.fillStyle = "black"
     c.fillRect(0, 0, canvas.width, canvas.height)
-    player.draw
+    player.update
+    
 }
+
+animate()
+
+// code for arrow key controls
+addEventListener('keydown', ({
+    key
+}) => {
+    switch (key) {
+        case 'a':
+            console.log('left')
+            break
+        case 'd':
+            console.log('right')
+            break
+        case ' ':
+            console.log('space')
+            break
+    }
+})
