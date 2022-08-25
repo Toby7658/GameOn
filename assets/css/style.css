@@ -1,3 +1,72 @@
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 0;
   margin: 0;
+  height: 100vh;
+  background-image: url("/assets/images/spc_background.png");
+  
+}
+
+.header {
+  position: absolute; 
+  margin: 10px;
+  top: 0px;
+  font-size: 4em;
+  color: white;
+  right: 80%;
+}
+
+.aliengirl {
+    position: absolute;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background: url("/assets/images/alienimage.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.laser {
+position: absolute;
+bottom: 40px;
+left: 51%;
+width: 20px;
+height: 20px;
+background: url("/assets/images/bulletimage.png");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+#rocketship {
+  position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url("/assets/images/shipimage.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    bottom: 0px;
+}
+
+#score {
+  position: absolute; 
+  margin: 10px;
+  top: 0px;
+  font-size: 5em;
+  color: white;
+  left: 90%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  right: 90%;
+}
+
+#game {
+  background-image: url("/assets/images/spc_background.png");
 }

@@ -1,78 +1,102 @@
-const canvas = document.querySelector('canvas');
-const c = canvas.getContext('2d');
+const canvas = document.getElementById('game');
+const canvasContext = canvas.getContext('2d');
+let ship = document.getElementById("rocketship");
+let alien = document.getElementById("aliengirl");
 
-// setting w and h to cove full screen
-canvas.width = innerWidth;
-canvas.height = innerHeight;
 
-// code to create the spaceship
-class Player {
-    constructor() {
+// setting w and h to cover full screen
+canvas.width = window.innerHeight;
+canvas.height = window.innerWidth;
+canvasContext.fillStyle = "";
+canvasContext.fillRect(0, 0, game.width, game.height);
 
-        // code to create movement for spaceship
-        this.velocity = {
-            x: 0,
-            y: 0
+window.addEventListener("keydown", (e) => {
+  var actualleft = parseInt(window.getComputedStyle(ship).getPropertyValue("left"));  // contain left property of rocketship
+  if (e.key == "ArrowLeft" && actualleft > 10) {                                     // the number of px from the left
+    ship.style.left = actualleft - 10 + "px";
+  }
+  //1000  =>  board width - ship width
+  else if (e.key == "ArrowRight" && actualleft <= 1400) {
+    ship.style.left = actualleft + 10 + "px";
+  }
+
+  if (e.key == "ArrowUp" || e.keyCode == 32) {
+    //32 is for space key
+    var bullets = document.createElement("div");
+    bullet.classList.add("laser");
+    board.appendChild(bullet);
+
+    var movebullet = setInterval(() => {    //repeated
+      var rocks = document.getElementsByClassName("aliengirl");
+
+      for (var i = 0; i < rocks.length; i++) {
+        var rock = rocks[i];
+        if (rock != undefined) {
+          var rockbound = rock.getBoundingClientRect();
+          var bulletbound = bullet.getBoundingClientRect();
+
+          //Condition to check whether the rock/alien and the bullet are at the same position..!
+          //If so,then we have to destroy that rock
+
+          if (
+            bulletbound.left >= rockbound.left &&
+            bulletbound.right <= rockbound.right &&
+            bulletbound.top <= rockbound.top &&
+            bulletbound.bottom <= rockbound.bottom
+          ) {
+            rock.parentElement.removeChild(rock); //Just removing that particular rock;
+            //Scoreboard
+            document.getElementById("score").innerHTML =
+              parseInt(document.getElementById("score").innerHTML) + 1;
+          }
         }
+      }
+      var bulletbottom = parseInt(
+        window.getComputedStyle(bullet).getPropertyValue("bottom")
+      );
 
-        // image defined within constructor
-        const image = new Image()
-        image.src = '/assets/images/shipimage.png'
-        image.onload = () => {
-            const scale = 0.15
-            this.image = image
-            this.width = image.width * scale
-            this.height = image.height * scale
-            this.position = {
-                x: canvas.width / 2 - this.width / 2,
-                y: canvas.height - this.height - 20
-            }
-        }
+      //Stops the bullet from moving outside the gamebox
+      if (bulletbottom >= 500) {
+        clearInterval(movebullet);
+      }
 
+      bullet.style.left = left + "px"; //bullet should always be placed at the top of my ship..!
+      bullet.style.bottom = bulletbottom + 3 + "px";
+    });
+  }
+});
+
+var generaterocks = setInterval(() => {
+  var rock = document.createElement("div");
+  rock.classList.add("aliengirl");
+  //Just getting the left of the rock to place it in random position...
+  var rockleft = parseInt(
+    window.getComputedStyle(rock).getPropertyValue("left")
+  );
+  //generate value between 0 to 450 where 450 => board width - rock width
+  rock.style.left = Math.floor(Math.random() * 3450) + "px";
+
+  board.appendChild(rock);
+}, 1000);
+
+var moverocks = setInterval(() => {
+  var rocks = document.getElementsByClassName("aliengirl");
+
+  if (rocks != undefined) {
+    for (var i = 0; i < rocks.length; i++) {
+      //Now I have to increase the top of each rock,so that the rocks can move downwards..
+      var rock = rocks[i]; //getting each rock
+      var rocktop = parseInt(
+        window.getComputedStyle(rock).getPropertyValue("top")
+      );
+      //475 => boardheight - rockheight + 25
+      if (rocktop >= 800) {
+        alert("Game Over");
+        clearInterval(moverocks);
+        window.location.reload();
+      }
+
+      rock.style.top = rocktop + 25 + "px";
     }
-    draw() {
-        // c.fillStyle = 'red';
-        // c.fillRect(this.position.x, this.position.y, 
-        // this.width, this.height)
-
-        c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height)
-    }
-}
-
-update() {
-if (this.image) {
-    this.draw()
-    this.position.x += this.velocity.x
-}
-}
-
-const player = new Player()
-
-
-// code to loop animation over and over
-function animate() {
-    requestAnimationFrame(animate)
-    c.fillStyle = "black"
-    c.fillRect(0, 0, canvas.width, canvas.height)
-    player.update
-    
-}
-
-animate()
-
-// code for arrow key controls
-addEventListener('keydown', ({
-    key
-}) => {
-    switch (key) {
-        case 'a':
-            console.log('left')
-            break
-        case 'd':
-            console.log('right')
-            break
-        case ' ':
-            console.log('space')
-            break
-    }
-})
+  }
+}, 450);
