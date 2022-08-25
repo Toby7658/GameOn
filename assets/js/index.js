@@ -37,3 +37,11 @@ class Player {
 
 const player = new Player()
 player.draw()
+
+// code to loop animation over and over
+function animate() {
+    requestAnimationFrame(animate)
+    c.fillStyle = 'black'
+    c.fillRect(0, 0, canvas.width, canvas.height)
+    player.draw
+}
