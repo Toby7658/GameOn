@@ -56,12 +56,12 @@ window.addEventListener("keydown", (e) => {
       );
 
       //Stops the bullet from moving outside the gamebox
-      if (bulletbottom >= 500) {
+      if (bulletbottom >= 800) {
         clearInterval(movebullet);
       }
 
       bullet.style.left = left + "px"; //bullet should always be placed at the top of my ship..!
-      bullet.style.bottom = bulletbottom + 3 + "px";
+      bullet.style.bottom = bulletbottom + 10 + "px";
     });
   }
 });
@@ -99,4 +99,4 @@ var moverocks = setInterval(() => {
       rock.style.top = rocktop + 25 + "px";
     }
   }
-}, 450);
+}, 150);
