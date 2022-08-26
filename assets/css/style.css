@@ -20,10 +20,8 @@
 
 .laser {
   position: absolute;
-  bottom: 40px;
-  left: 51%;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background: url("/assets/images/bulletimage.png");
   background-size: contain;
   background-repeat: no-repeat;

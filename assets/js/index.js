@@ -1,6 +1,8 @@
 let canvas = document.getElementById('canvas');
 let multiplyAlienGirl
 let moveAlienGirl
+let moveLaser
+let ship = document.getElementById('rocketship');
 //function startGame() {}
 
 function letsPlay() {
@@ -9,7 +11,7 @@ function letsPlay() {
 }
 
 function multiplyAlien() {
-  let multiplyAlienGirl = setInterval(() => {
+   multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div");
     alien.classList.add("aliengirl");
     alien.style.left = Math.floor(Math.random() * (window.innerWidth-100)) + "px"; // aliens fall width of screen
@@ -17,8 +19,46 @@ function multiplyAlien() {
   },2000)
 }
 
+function kill(b){
+  const alienGirls = document.getElementsByClassName("aliengirl");
+  for (let i = 0; i < alienGirls.length; i++) {
+    if(parseInt(window.getComputedStyle(b).getPropertyValue("top")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) &&
+    parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
+    parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
+    parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50 
+    ) {
+      
+      alienGirls[i].remove();  
+    }   
+  }
+}
+
+function moveBullet() {
+  moveLaser = setInterval(() => {
+   const bullets = document.getElementsByClassName("laser");
+   for (let i = 0; i < bullets.length; i++) {
+    if (parseInt(window.getComputedStyle(bullets[i]).getPropertyValue("top")) >  30) {
+      bullets[i].style.top = parseInt(window.getComputedStyle(bullets[i]).getPropertyValue("top")) - 30 + 'px';
+    } else {
+      bullets[i].remove()
+    }
+    kill(bullets[i]);
+  }
+ }, 300);
+}
+
+
+function shoot(){
+  let bullet = document.createElement("div");
+  bullet.classList.add("laser");
+  bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) +35 + "px"; 
+  bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 10 + "px"; 
+  canvas.appendChild(bullet);
+  moveBullet();
+}
+
 function moveAlien() {
-  let moveAlienGirl = setInterval(() => {
+   moveAlienGirl = setInterval(() => {
     const alienGirls = document.getElementsByClassName("aliengirl");
     //var alienGirlTop = window.getComputedStyle(alienGirl).getPropertyValue("top");
     //var alienGirlTopAsInteger = parseInt(alienGirlTop);
@@ -38,25 +78,27 @@ function moveAlien() {
 
 
  window.addEventListener('keydown', (e) => {
-  let control = document.getElementById('rocketship');
   let moveBy = 20;
   switch (true) {
-    case (e.key === 'ArrowLeft' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy >= 0):
-      control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
+    case (e.key === 'ArrowLeft' && parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0):
+      ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
       break;
-    case (e.key === 'ArrowRight' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth):
-      control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 'px';
+    case (e.key === 'ArrowRight' && parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth):
+      ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
       break;
-    case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy >= 0):
-      control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy + 'px';
+    case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0):
+      ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
       break;
-    case (e.key === 'ArrowDown' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight):
-      control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 'px';
+    case (e.key === 'ArrowDown' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight):
+      ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
       break;
     case (e.key === 'Enter'):
       document.getElementById("splash").remove();
       letsPlay();
       break;
+    case (e.key === ' '):
+      shoot();
+    break;
   }
 })
 
