@@ -6,7 +6,6 @@ function startGame(){
 }
 
 
-
 // setting width and height to cover full screen
 // canvas.width = window.innerHeight;
 // canvas.height = window.innerWidth;
@@ -75,7 +74,7 @@ function MoveAlien() {
           clearInterval(moverocks);
           clearInterval(creatrocks);
         }
-        rock.style.top = rocktop + 2 + "px";
+        rock.style.top = rocktop + 0 + "px";
       }
     }
   }, 5000); 
