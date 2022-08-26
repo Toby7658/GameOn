@@ -42,8 +42,8 @@
 
 #rocketship {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background: url("/assets/images/shipimage.png");
   background-size: contain;
   background-repeat: no-repeat;
