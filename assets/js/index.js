@@ -1,84 +1,60 @@
-const canvas = document.getElementById('canvas');
-//const canvasContext = canvas.getContext('2d');
-// let ship = document.getElementById("rocketship");
+//const canvas = document.getElementById('canvas');
+//function startGame() {}
 
-function startGame(){
-}
+//function moveAlien() {
 
 
-// setting width and height to cover full screen
-// canvas.width = window.innerHeight;
-// canvas.height = window.innerWidth;
-// canvasContext.fillStyle = "black";
-// canvasContext.fillRect(0, 0, canvas.width, canvas.height); 
-
-// code to create keyboard controls
-// window.addEventListener("keydown", (e) => {
-//   var actualleft = parseInt(window.getComputedStyle(ship).getPropertyValue("left"));  // contain left property of rocketship
-//   if (e.key == "ArrowLeft" && actualleft > 10) {                                     // the number of px from the left
-//     ship.style.left = actualleft - 10 + "px";
-//   }
-//   //1000  =>  gameboard width - ship width
-//   else if (e.key == "ArrowRight" && actualleft <= 1400) {
-//     ship.style.left = actualleft + 10 + "px";
-//   }
-// }
-
-
-let alien = document.getElementById("aliengirl");
 let control = document.getElementById('rocketship');
 let moveBy = 20;
-window.addEventListener('keydown', (e) => {
-    switch (true) {
-        case (e.key==='ArrowLeft' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy  >= 0):
-          control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
-            break;
-        case (e.key==='ArrowRight' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy +100  <= window.innerWidth):
-          control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 'px';
-            break;
-        case (e.key==='ArrowUp' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy   >= 0):
-          control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy + 'px';
-            break;
-        case (e.key==='ArrowDown' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy +100   <= window.innerHeight):
-          control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 'px';
-            break;
-        case(e.key==='Enter'):
-          letsPlay;
-          document.getElementById("splash").remove();
+let moveAlienGirl = setInterval(() => {
+       const alienGirls = document.getElementsByClassName("aliengirl");
+       //var alienGirlTop = window.getComputedStyle(alienGirl).getPropertyValue("top");
+       //var alienGirlTopAsInteger = parseInt(alienGirlTop);
+       for (let i = 0; i < alienGirls.length; i++) {
+        alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
+      
+        if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) >  window.innerHeight - 100) {
+          alert("Game Over");
+          clearInterval(moveAlienGirl);
+          document.location.reload();
+          //clearInterval(creatrocks);
+        }
+      }
+ }, 1000);
 
-  	}
+
+
+ window.addEventListener('keydown', (e) => {
+  switch (true) {
+    case (e.key === 'ArrowLeft' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy >= 0):
+      control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
+      break;
+    case (e.key === 'ArrowRight' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth):
+      control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 'px';
+      break;
+    case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy >= 0):
+      control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy + 'px';
+      break;
+    case (e.key === 'ArrowDown' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight):
+      control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 'px';
+      break;
+    case (e.key === 'Enter'):
+      document.getElementById("splash").remove();
+
+      break;
+  }
 })
 
-function createAlien() {
-  let rock = document.createElement("div");
-  rock.classList.add("aliengirl");
-  rock.style.left = Math.floor(Math.random() * window.innerWidth) + "px";   // aliens fall width of screen
-  canvas.appendChild(rock);
-}
 
-function MoveAlien() {
-  var moverocks = setTimeout(() => {
-    var rocks = document.getElementsByClassName("aliengirl");
-  
-    if (rocks != undefined) {
-      for (var i = 0; i < rocks.length; i++) {
-        //Now I have to increase the top of each rock,so that the rocks can move downwards..
-        var rock = rocks[i]; //getting each rock
-        var rocktop = parseInt(
-         window.getComputedStyle(rock).getPropertyValue("top")
-         );
-        //475 => game board height - rockheight + 25
-        if (rocktop >=  window.innerHeight - 100) {
-          alert("Game Over");
-          document.location.reload();
-          clearInterval(moverocks);
-          clearInterval(creatrocks);
-        }
-        rock.style.top = rocktop + 0 + "px";
-      }
-    }
-  }, 5000); 
-}
+
+
+// function createAlien() {
+//   let rock = document.createElement("div");
+//   rock.classList.add("aliengirl");
+//   rock.style.left = Math.floor(Math.random() * window.innerWidth) + "px"; // aliens fall width of screen
+//   canvas.appendChild(rock);
+// }
+
 
 function letsPlay() {
   MoveAlien;
@@ -91,7 +67,12 @@ function letsPlay() {
 
 
 
-
+/*if (rocktop >=  window.innerHeight - 100) {
+     alert("Game Over");
+     document.location.reload();
+     clearInterval(moverocks);
+     clearInterval(creatrocks);
+   } */
 
 
 
