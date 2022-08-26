@@ -59,6 +59,15 @@
   left: 90%;
 }
 
+
+#splash {
+  position: absolute;
+  margin: 10px;
+  top: 250px;
+  font-size: 7em;
+  color: white;
+text-align: center;}
+
 /* .rocketship{
     height: 100px;
     width: 100px;

@@ -2,6 +2,9 @@ const canvas = document.getElementById('canvas');
 //const canvasContext = canvas.getContext('2d');
 // let ship = document.getElementById("rocketship");
 
+function startGame(){
+}
+
 
 
 // setting width and height to cover full screen
@@ -24,71 +27,66 @@ const canvas = document.getElementById('canvas');
 
 
 let alien = document.getElementById("aliengirl");
-
-
 let control = document.getElementById('rocketship');
 let moveBy = 20;
-/*window.addEventListener('load', () => {
-  control.style.position = 'absolute';
-  control.style.left = 0;
-  control.style.top = 300;
-});*/
-
-// code for arrow key movement
 window.addEventListener('keydown', (e) => {
-    switch (e.key) {
-        case 'ArrowLeft':
+    switch (true) {
+        case (e.key==='ArrowLeft' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy  >= 0):
           control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
             break;
-        case 'ArrowRight':
+        case (e.key==='ArrowRight' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy +100  <= window.innerWidth):
           control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 'px';
             break;
-        case 'ArrowUp':
+        case (e.key==='ArrowUp' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy   >= 0):
           control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy + 'px';
             break;
-        case 'ArrowDown':
+        case (e.key==='ArrowDown' && parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy +100   <= window.innerHeight):
           control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 'px';
             break;
+        case(e.key==='Enter'):
+          letsPlay;
+          document.getElementById("splash").remove();
 
+  	}
+})
+
+function createAlien() {
+  let rock = document.createElement("div");
+  rock.classList.add("aliengirl");
+  rock.style.left = Math.floor(Math.random() * window.innerWidth) + "px";   // aliens fall width of screen
+  canvas.appendChild(rock);
 }
 
-var generaterocks = setInterval(() => {
-  var rock = document.createElement("div");
-  rock.classList.add("aliengirl");
-  //Just getting the left of the rock to place it in random position...
-  var rockleft = parseInt(
-    window.getComputedStyle(rock).getPropertyValue("left")
-  );
-  //generate value => gameboard width - rock width
-  rock.style.left = Math.floor(Math.random() * 1700) + "px";   // aliens fall width of screen
-
-  canvas.appendChild(rock);
-}, 3000);  // aliens numbers spaced out as they fall
-
-var moverocks = setInterval(() => {
-  var rocks = document.getElementsByClassName("aliengirl");
-
-  if (rocks != undefined) {
-    for (var i = 0; i < rocks.length; i++) {
-      //Now I have to increase the top of each rock,so that the rocks can move downwards..
-      var rock = rocks[i]; //getting each rock
-      var rocktop = parseInt(
-       window.getComputedStyle(rock).getPropertyValue("top")
-       );
-      //475 => game board height - rockheight + 25
-      if (rocktop >= 800) {
-        alert("Game Over");
-        // document.location.reload();
-        // clearInterval(interval);
+function MoveAlien() {
+  var moverocks = setTimeout(() => {
+    var rocks = document.getElementsByClassName("aliengirl");
+  
+    if (rocks != undefined) {
+      for (var i = 0; i < rocks.length; i++) {
+        //Now I have to increase the top of each rock,so that the rocks can move downwards..
+        var rock = rocks[i]; //getting each rock
+        var rocktop = parseInt(
+         window.getComputedStyle(rock).getPropertyValue("top")
+         );
+        //475 => game board height - rockheight + 25
+        if (rocktop >=  window.innerHeight - 100) {
+          alert("Game Over");
+          document.location.reload();
+          clearInterval(moverocks);
+          clearInterval(creatrocks);
+        }
+        rock.style.top = rocktop + 2 + "px";
       }
-      
+    }
+  }, 5000); 
+}
 
-      rock.style.top = rocktop + 1 + "px";
-    }
-  }
-}, 1000);  // speed of alien 
-    }
-);
+function letsPlay() {
+  MoveAlien;
+}
+
+
+
 
 
 
