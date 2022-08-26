@@ -1,30 +1,45 @@
-//const canvas = document.getElementById('canvas');
+let canvas = document.getElementById('canvas');
+let multiplyAlienGirl
+let moveAlienGirl
 //function startGame() {}
 
-//function moveAlien() {
+function letsPlay() {
+  moveAlien();
+  multiplyAlien();
+}
 
+function multiplyAlien() {
+  let multiplyAlienGirl = setInterval(() => {
+    let alien = document.createElement("div");
+    alien.classList.add("aliengirl");
+    alien.style.left = Math.floor(Math.random() * (window.innerWidth-100)) + "px"; // aliens fall width of screen
+    canvas.appendChild(alien);
+  },2000)
+}
 
-let control = document.getElementById('rocketship');
-let moveBy = 20;
-let moveAlienGirl = setInterval(() => {
-       const alienGirls = document.getElementsByClassName("aliengirl");
-       //var alienGirlTop = window.getComputedStyle(alienGirl).getPropertyValue("top");
-       //var alienGirlTopAsInteger = parseInt(alienGirlTop);
-       for (let i = 0; i < alienGirls.length; i++) {
-        alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
-      
-        if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) >  window.innerHeight - 100) {
-          alert("Game Over");
-          clearInterval(moveAlienGirl);
-          document.location.reload();
-          //clearInterval(creatrocks);
-        }
-      }
- }, 1000);
+function moveAlien() {
+  let moveAlienGirl = setInterval(() => {
+    const alienGirls = document.getElementsByClassName("aliengirl");
+    //var alienGirlTop = window.getComputedStyle(alienGirl).getPropertyValue("top");
+    //var alienGirlTopAsInteger = parseInt(alienGirlTop);
+    for (let i = 0; i < alienGirls.length; i++) {
+     alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
+   
+     if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) >  window.innerHeight - 100) {
+       alert("Game Over");
+       clearInterval(moveAlienGirl);
+       clearInterval(multiplyAlienGirl);
+       document.location.reload();
+     }
+   }
+  }, 1000);
+}
 
 
 
  window.addEventListener('keydown', (e) => {
+  let control = document.getElementById('rocketship');
+  let moveBy = 20;
   switch (true) {
     case (e.key === 'ArrowLeft' && parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy >= 0):
       control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
@@ -40,7 +55,7 @@ let moveAlienGirl = setInterval(() => {
       break;
     case (e.key === 'Enter'):
       document.getElementById("splash").remove();
-
+      letsPlay();
       break;
   }
 })
@@ -48,17 +63,8 @@ let moveAlienGirl = setInterval(() => {
 
 
 
-// function createAlien() {
-//   let rock = document.createElement("div");
-//   rock.classList.add("aliengirl");
-//   rock.style.left = Math.floor(Math.random() * window.innerWidth) + "px"; // aliens fall width of screen
-//   canvas.appendChild(rock);
-// }
 
 
-function letsPlay() {
-  MoveAlien;
-}
 
 
 
