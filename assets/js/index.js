@@ -1,14 +1,14 @@
 const canvas = document.getElementById('canvas');
-const canvasContext = canvas.getContext('2d');
-//let ship = document.getElementById("rocketship");
+//const canvasContext = canvas.getContext('2d');
+// let ship = document.getElementById("rocketship");
 // let alien = document.getElementById("aliengirl");
 
 
 // setting width and height to cover full screen
-canvas.width = window.innerHeight;
-canvas.height = window.innerWidth;
+//canvas.width = window.innerHeight;
+//canvas.height = window.innerWidth;
 //canvasContext.fillStyle = "black";
-canvasContext.fillRect(0, 0, game.width, game.height); 
+//canvasContext.fillRect(0, 0, canvas.width, canvas.height); 
 
 // code to create keyboard controls
 // window.addEventListener("keydown", (e) => {
@@ -24,24 +24,24 @@ canvasContext.fillRect(0, 0, game.width, game.height);
 
 let control = document.getElementById('rocketship');
 let moveBy = 10;
-window.addEventListener('load', () => {
+/*window.addEventListener('load', () => {
   control.style.position = 'absolute';
   control.style.left = 0;
-  control.style.top = 0;
-});
+  control.style.top = 300;
+});*/
 window.addEventListener('keydown', (e) => {
     switch (e.key) {
         case 'ArrowLeft':
-          control.style.left = parseInt(control.style.left) - moveBy + 'px';
+          control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) - moveBy + 'px';
             break;
         case 'ArrowRight':
-          control.style.left = parseInt(control.style.left) + moveBy + 'px';
+          control.style.left = parseInt(window.getComputedStyle(control).getPropertyValue("left")) + moveBy + 'px';
             break;
         case 'ArrowUp':
-          control.style.top = parseInt(control.style.top) - moveBy + 'px';
+          control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) - moveBy + 'px';
             break;
         case 'ArrowDown':
-          control.style.top = parseInt(control.style.top) + moveBy + 'px';
+          control.style.top = parseInt(window.getComputedStyle(control).getPropertyValue("top")) + moveBy + 'px';
             break;
     }
 });
