@@ -107,10 +107,6 @@ function moveAlien() {
 }
 
 
-function movedown() {
-  myGamePiece.speedY += 1;
-}
-
 function moveleft() {
   if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0){
     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
@@ -121,7 +117,20 @@ function moveright() {
   if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100){
     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';  
   }
-  //myGamePiece.speedX += 1;
+
+}
+
+function pressEnter() {
+  if(start===1){
+    document.getElementById("splash").remove(); // alert the user to press Enter to start game
+    letsPlay();                                 // Enter key removes splash
+  } else {
+    document.location.reload();
+  }
+}
+
+function pressSpaceBar(){
+  shoot();
 }
 
 // function to activate controls via arrow tabs on keyboard
@@ -142,15 +151,10 @@ function moveright() {
       ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
       break;
     case (e.key === 'Enter'):
-      if(start===1){
-        document.getElementById("splash").remove(); // alert the user to press Enter to start game
-        letsPlay();                                 // Enter key removes splash
-      } else {
-        document.location.reload();
-      }
+      pressEnter();   
       break;
     case (e.key === ' '):
-      shoot();
+      pressSpaceBar();
     break;
   }
 })
