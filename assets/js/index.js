@@ -106,9 +106,6 @@ function moveAlien() {
   }, 1000);
 }
 
-function moveup() {
-  myGamePiece.speedY -= 1;
-}
 
 function movedown() {
   myGamePiece.speedY += 1;
@@ -118,11 +115,13 @@ function moveleft() {
   if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0){
     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
   }
-  
 }
 
 function moveright() {
-  myGamePiece.speedX += 1;
+  if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100){
+    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';  
+  }
+  //myGamePiece.speedX += 1;
 }
 
 // function to activate controls via arrow tabs on keyboard
@@ -133,8 +132,8 @@ function moveright() {
     case (e.key === 'ArrowLeft'):
       moveleft();
       break;
-    case (e.key === 'ArrowRight' && parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth):
-      ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
+    case (e.key === 'ArrowRight'):
+    moveright();
       break;
     case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0):
       ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
