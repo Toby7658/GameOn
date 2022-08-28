@@ -22,6 +22,8 @@ function playAudio(what) {
   sound.autoplay = true;
   canvas.appendChild(sound);
   */
+
+  // sound for blast when alien is hit
   if (what === "blast") {
     document.getElementById('blast').play();
   }
@@ -50,7 +52,7 @@ function kill(b) {
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50
     ) {
-      playAudio('blast');
+      playAudio('blast'); // alien blast sound
       alienGirls[i].remove(); // alien disappears when hit 
       b.remove(); // bullet disappears
       updateScore(); // score increases
@@ -109,7 +111,7 @@ function moveAlien() {
 
         // at game end_ clear to start again when enter is pressed
         el.innerHTML = 'GAME OVER<br/>Press Enter to Restart';
-        document.getElementById('gameover').play();
+        document.getElementById('gameover').play(); // sound when game is over
         canvas.appendChild(el);
         clearInterval(moveAlienGirl);
         clearInterval(multiplyAlienGirl);
@@ -151,7 +153,6 @@ function pressSpaceBar() {
 // function to activate controls via arrow tabs on keyboard
 // When listener hears arrow keys_ship moves as per key direction
 window.addEventListener('keydown', (e) => {
-
   switch (true) {
     case (e.key === 'ArrowLeft'):
       moveLeft();
