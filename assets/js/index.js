@@ -6,11 +6,25 @@ let moveLaser
 let ship = document.getElementById('rocketship');
 let start = 1;
 let moveBy = 20;
+
 //function to startGame 
 
 function letsPlay() {
   moveAlien();
   multiplyAlien();
+}
+
+function playAudio(what) {
+  /*var sound = document.createElement("AUDIO");
+  sound.id='blast';  
+  sound.src      = '/assets/audio/blast.wav';
+  sound.type     = 'audio/wav ';
+  sound.autoplay = true;
+  canvas.appendChild(sound);
+  */
+  if (what === "blast") {
+    document.getElementById('blast').play();
+  }
 }
 
 // multiply aliens at random intervals using math.random
@@ -36,7 +50,7 @@ function kill(b) {
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50
     ) {
-
+      playAudio('blast');
       alienGirls[i].remove(); // alien disappears when hit 
       b.remove(); // bullet disappears
       updateScore(); // score increases
@@ -74,8 +88,8 @@ function moveBullet(bull) {
 function shoot() {
   let bullet = document.createElement("div");
   bullet.classList.add("laser");
-  bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + 35 + "px";
-  bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 10 + "px";
+  bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + 10 + "px";
+  bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 20 + "px";
   canvas.appendChild(bullet);
 
   // move bullet
@@ -95,6 +109,7 @@ function moveAlien() {
 
         // at game end_ clear to start again when enter is pressed
         el.innerHTML = 'GAME OVER<br/>Press Enter to Restart';
+        document.getElementById('gameover').play();
         canvas.appendChild(el);
         clearInterval(moveAlienGirl);
         clearInterval(multiplyAlienGirl);
@@ -132,9 +147,6 @@ function pressSpaceBar() {
   shoot();
 }
 
-function enter() {
-
-}
 
 // function to activate controls via arrow tabs on keyboard
 // When listener hears arrow keys_ship moves as per key direction
@@ -142,10 +154,10 @@ window.addEventListener('keydown', (e) => {
 
   switch (true) {
     case (e.key === 'ArrowLeft'):
-      moveleft();
+      moveLeft();
       break;
     case (e.key === 'ArrowRight'):
-      moveright();
+      moveRight();
       break;
     case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0):
       ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';

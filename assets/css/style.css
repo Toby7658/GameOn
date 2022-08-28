@@ -67,13 +67,16 @@
   text-align: center;
 }
 
-.mobilecontrol {
+ .mobilecontrol {
   text-align: center;
   display: inline-block;
   position: absolute;
   bottom: 20px;
-   
-}
+
+} 
+
+
+
 
 
 
@@ -110,7 +113,14 @@
     display: inline-block;
     position: absolute;
     bottom: 10px;
-} }
+} 
+
+.laser {
+  height: 20px;
+  width: 20px;
+}
+
+}
 
 @media screen and (min-width: 481px) and (max-width: 640px) {
   .header {
@@ -143,6 +153,11 @@
     display: inline-block;
     position: absolute;
     bottom: 20px;
+}
+
+.laser {
+  height: 20px;
+  width: 20px;
 }
 }
 
