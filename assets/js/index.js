@@ -14,22 +14,19 @@ function letsPlay() {
 }
 
 function playAudio(what) {
-  if (what === "blast") {
-    document.getElementById('blast').play();
-  }
-}
-  // sound for blast when alien is hit
-  if (what === "blast") {
-    document.getElementById('blast').play();
-  }
-
-    /*var sound = document.createElement("AUDIO");
+  /*var sound = document.createElement("AUDIO");
   sound.id='blast';  
   sound.src      = '/assets/audio/blast.wav';
   sound.type     = 'audio/wav ';
   sound.autoplay = true;
   canvas.appendChild(sound);
   */
+
+  // sound for blast when alien is hit
+  if (what === "blast") {
+    document.getElementById('blast').play();
+  }
+}
 
 // multiply aliens at random intervals using math.random
 function multiplyAlien() {
