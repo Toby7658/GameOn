@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Domine&family=Ibarra+Real+Nova:wght@500&family=Lato:wght@300&family=Oswald&family=PT+Sans&family=Roboto+Slab:wght@300&family=Silkscreen&display=swap');
+
 #canvas {
   display: flex;
   flex-direction: column;
@@ -16,8 +17,8 @@
   top: 0px;
   font-size: 4em;
   left: 2%;
+  z-index: 3;
 }
-
 
 .laser {
   position: absolute;
@@ -30,7 +31,7 @@
 
 .aliengirl {
   position: absolute;
-  top: 0px;
+  top: 30px;
   width: 80px;
   height: 80px;
   background: url("/assets/images/alienship.png");
@@ -54,8 +55,8 @@
   margin: 10px;
   top: 0px;
   font-size: 4em;
-  
   right: 2%;
+  z-index: 2;
 }
 
 
@@ -64,8 +65,8 @@
   margin: 10px;
   top: 250px;
   font-size: 7em;
-  
-text-align: center;}
+  text-align: center;
+}
 
 .mobilecontrol {
   position: absolute;
@@ -73,7 +74,6 @@ text-align: center;}
   margin-right: 90%;
   margin-bottom: 5%;
   text-align: center;
-
   border: none;
   padding: 15px 32px;
   text-decoration: none;
@@ -87,7 +87,7 @@ text-align: center;}
 
 @media screen and (min-width: 480px) and (max-width: 950px) {
   #canvas {
-    flex-basis:content;
+    flex-basis: content;
     font-size: 15px;
     margin: 15px;
     text-align: center;
@@ -95,28 +95,21 @@ text-align: center;}
 }
 
 
-@media screen and (min-width: 950px) {
-}  
+@media screen and (min-width: 950px) {}
 
-@media screen and (min-width: 950px) and (max-width: 3000px) {
+@media screen and (min-width: 950px) and (max-width: 3000px) {}
 
-}
-
-@media screen and (min-width: 300px) and (max-width: 480px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   #canvas {
-   font-size: 5px;
-  
+    font-size: 5px;
   }
 
   .header {
     text-align: center;
-    font-size: 5px
+    font-size: 20px
   }
 }
- 
-    
-
-@media screen and (min-width: 1300px) {
 
 
-  }
+
+@media screen and (min-width: 1300px) {}
