@@ -12,34 +12,44 @@
     <title>Game On</title>
 </head>
 
+<!-- game set on canvas -->
+
 <body id="canvas">
     <h1 class="header">Game On</h1>
-
+    <!-- splash text disappears when press enter -->
     <div id="splash">Press Enter to Start</div>
-
+    <!-- controls for arrow keys and touch screen -->
     <div class="mobilecontrol">
         <button class="buttonleft" onclick="moveLeft()">&#8592;</button>
-        <button class="buttonspace"onclick="pressSpaceBar()">Shoot</button>
+        <button class="buttonspace" onclick="pressSpaceBar()">Shoot</button>
         <button class="buttonright" onclick="moveRight()">&#8594;</button>]
         <button class="buttonenter" onclick="pressEnter()">Enter</button>
-      </div>
+    </div>
 
-
+   
     <audio id="music"></audio>
-    
+
     <div id="rocketship"></div>
 
     <div class="aliengirl"></div>
     <!-- <div id="rocketship"></div> -->
     <div id="score">0</div>
+   
+    <!-- audio for backaudio -->
+    <audio id="backaudio>
+    <source src="#" type="audio/mpeg">
+    </audio>
+
+    <!-- audio for when alien is hit -->
     <audio id="blast">
         <source src="/assets/audio/blast.wav" type="audio/wav">
-      Your browser does not support the audio element.
-      </audio>
-      <audio id="gameover">
-        <source src="/assets/audio/gameover.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
+    </audio>
+    
+    <!-- audio for gameover -->
+    <audio id="gameover">
+    <source src="/assets/audio/gameover.mp3" type="audio/mpeg">
+    </audio>
+    
     <script src="assets/js/index.js" type="text/javascript">
     </script>
 
