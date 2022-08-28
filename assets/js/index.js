@@ -1,16 +1,20 @@
+
+// block scoped variables for different items of the game
 let canvas = document.getElementById('canvas');
 let multiplyAlienGirl
 let moveAlienGirl
 let moveLaser
 let ship = document.getElementById('rocketship');
 let start=1;
-//function startGame() {}
+let moveBy = 20;
+//function to startGame 
 
 function letsPlay() {
   moveAlien();
   multiplyAlien();
 }
 
+// multiply aliens at random intervals using math.random
 function multiplyAlien() {
    multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div");
@@ -20,6 +24,7 @@ function multiplyAlien() {
   },2000)
 }
 
+// score increases when aliens are hit
 function updateScore(){
   document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1; 
 }
@@ -33,9 +38,9 @@ function kill(b){
     parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50 
     ) {
       
-      alienGirls[i].remove(); 
-      b.remove();
-      updateScore();
+      alienGirls[i].remove(); // alien disappears when hit 
+      b.remove(); // bullet disappears
+      updateScore(); // score increases
     }   
   }
 }
@@ -54,7 +59,7 @@ function kill(b){
  }, 300);
 }*/
 
-
+// function for bullets to shoot at set interval directed by spacebar
 function moveBullet(bull){
   moveLaser = setInterval(() => {
   if (parseInt(window.getComputedStyle(bull).getPropertyValue("top")) >  30) {
@@ -66,17 +71,19 @@ function moveBullet(bull){
    
   }, 100);
 }
-
+// function for bullet to leave top of ship as spacebar is pushed
 function shoot(){
   let bullet = document.createElement("div");
   bullet.classList.add("laser");
   bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) +35 + "px"; 
   bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 10 + "px"; 
   canvas.appendChild(bullet);
-  //moveBullet();
+
+  // move bullet
   moveBullet(bullet);
 }
 
+// function for alien to move from top to bottom of screen
 function moveAlien() {
    moveAlienGirl = setInterval(() => {
     const alienGirls = document.getElementsByClassName("aliengirl");
@@ -87,6 +94,7 @@ function moveAlien() {
       const el = document.createElement('div');
       el.setAttribute('id', 'splash');
       
+      // at game end_ clear to start again when enter is pressed
       el.innerHTML = 'GAME OVER<br />Press Enter to Restart';
       canvas.appendChild(el);
       clearInterval(moveAlienGirl);
@@ -98,11 +106,32 @@ function moveAlien() {
   }, 1000);
 }
 
+function moveup() {
+  myGamePiece.speedY -= 1;
+}
+
+function movedown() {
+  myGamePiece.speedY += 1;
+}
+
+function moveleft() {
+  if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0){
+    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
+  }
+  
+}
+
+function moveright() {
+  myGamePiece.speedX += 1;
+}
+
+// function to activate controls via arrow tabs on keyboard
+// When listener hears arrow keys_ship moves as per key direction
  window.addEventListener('keydown', (e) => {
-  let moveBy = 20;
+  
   switch (true) {
-    case (e.key === 'ArrowLeft' && parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0):
-      ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
+    case (e.key === 'ArrowLeft'):
+      moveleft();
       break;
     case (e.key === 'ArrowRight' && parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth):
       ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
@@ -115,8 +144,8 @@ function moveAlien() {
       break;
     case (e.key === 'Enter'):
       if(start===1){
-        document.getElementById("splash").remove();
-        letsPlay();
+        document.getElementById("splash").remove(); // alert the user to press Enter to start game
+        letsPlay();                                 // Enter key removes splash
       } else {
         document.location.reload();
       }
