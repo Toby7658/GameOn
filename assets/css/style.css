@@ -113,7 +113,7 @@
     bottom: 10px;
 } }
 
-@media screen and (min-width: 481px) and (max-width: 601px) {
+@media screen and (min-width: 481px) and (max-width: 640px) {
   .header {
     font-size: 20px;
   }
@@ -124,14 +124,14 @@
   }
 
   #rocketship {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     bottom: 50px;
   }
 
   .aliengirl {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 30px;
   }
 
@@ -143,14 +143,14 @@
     text-align: center;
     display: inline-block;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 }
 }
 
 
-@media screen and (min-width: 602px) and (max-width: 3000px) {
+@media screen and (min-width: 641px) and (max-width: 3000px) {
   .header {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #splash {
@@ -168,10 +168,11 @@
     width: 50px;
     height: 50px;
     font-size: 30px;
+    bottom: 0px;
   }
 
   #score {
-    font-size: 20px;
+    font-size: 50px;
   }
 
   .mobilecontrol {
