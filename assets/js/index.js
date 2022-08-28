@@ -1,11 +1,10 @@
-
 // block scoped variables for different items of the game
 let canvas = document.getElementById('canvas');
 let multiplyAlienGirl
 let moveAlienGirl
 let moveLaser
 let ship = document.getElementById('rocketship');
-let start=1;
+let start = 1;
 let moveBy = 20;
 //function to startGame 
 
@@ -16,32 +15,32 @@ function letsPlay() {
 
 // multiply aliens at random intervals using math.random
 function multiplyAlien() {
-   multiplyAlienGirl = setInterval(() => {
+  multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div");
     alien.classList.add("aliengirl");
-    alien.style.left = Math.floor(Math.random() * (window.innerWidth-100)) + "px"; // aliens fall width of screen
+    alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // aliens fall width of screen
     canvas.appendChild(alien);
-  },2000)
+  }, 2000)
 }
 
 // score increases when aliens are hit
-function updateScore(){
-  document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1; 
+function updateScore() {
+  document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
 
-function kill(b){
+function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
   for (let i = 0; i < alienGirls.length; i++) {
-    if(parseInt(window.getComputedStyle(b).getPropertyValue("top")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) &&
-    parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
-    parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
-    parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50 
+    if (parseInt(window.getComputedStyle(b).getPropertyValue("top")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) &&
+      parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
+      parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
+      parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50
     ) {
-      
+
       alienGirls[i].remove(); // alien disappears when hit 
       b.remove(); // bullet disappears
       updateScore(); // score increases
-    }   
+    }
   }
 }
 
@@ -60,23 +59,23 @@ function kill(b){
 }*/
 
 // function for bullets to shoot at set interval directed by spacebar
-function moveBullet(bull){
+function moveBullet(bull) {
   moveLaser = setInterval(() => {
-  if (parseInt(window.getComputedStyle(bull).getPropertyValue("top")) >  30) {
-       bull.style.top = parseInt(window.getComputedStyle(bull).getPropertyValue("top")) - 30 + 'px';
-     } else {
-       bull.remove()
-     }
-     kill(bull);
-   
+    if (parseInt(window.getComputedStyle(bull).getPropertyValue("top")) > 30) {
+      bull.style.top = parseInt(window.getComputedStyle(bull).getPropertyValue("top")) - 30 + 'px';
+    } else {
+      bull.remove()
+    }
+    kill(bull);
+
   }, 100);
 }
 // function for bullet to leave top of ship as spacebar is pushed
-function shoot(){
+function shoot() {
   let bullet = document.createElement("div");
   bullet.classList.add("laser");
-  bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) +35 + "px"; 
-  bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 10 + "px"; 
+  bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + 35 + "px";
+  bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 10 + "px";
   canvas.appendChild(bullet);
 
   // move bullet
@@ -85,64 +84,68 @@ function shoot(){
 
 // function for alien to move from top to bottom of screen
 function moveAlien() {
-   moveAlienGirl = setInterval(() => {
+  moveAlienGirl = setInterval(() => {
     const alienGirls = document.getElementsByClassName("aliengirl");
     for (let i = 0; i < alienGirls.length; i++) {
-     alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
-   
-     if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) >  window.innerHeight - 100) {
-      const el = document.createElement('div');
-      el.setAttribute('id', 'splash');
-      
-      // at game end_ clear to start again when enter is pressed
-      el.innerHTML = 'GAME OVER<br />Press Enter to Restart';
-      canvas.appendChild(el);
-      clearInterval(moveAlienGirl);
-      clearInterval(multiplyAlienGirl);
-      clearInterval(moveBullet);
-      start=0;
-     }
-   }
+      alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
+
+      if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) > window.innerHeight - 100) {
+        const el = document.createElement('div');
+        el.setAttribute('id', 'splash');
+
+        // at game end_ clear to start again when enter is pressed
+        el.innerHTML = 'GAME OVER<br/>Press Enter to Restart';
+        canvas.appendChild(el);
+        clearInterval(moveAlienGirl);
+        clearInterval(multiplyAlienGirl);
+        clearInterval(moveBullet);
+        start = 0;
+      }
+    }
   }, 1000);
 }
 
 
-function moveleft() {
-  if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0){
+function moveLeft() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
   }
 }
 
-function moveright() {
-  if(parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100){
-    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';  
+function moveRight() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100) {
+    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
   }
 
 }
 
 function pressEnter() {
-  if(start===1){
+  if (start === 1) {
     document.getElementById("splash").remove(); // alert the user to press Enter to start game
-    letsPlay();                                 // Enter key removes splash
+    letsPlay(); // Enter key removes splash
   } else {
     document.location.reload();
   }
 }
 
-function pressSpaceBar(){
+function pressSpaceBar() {
   shoot();
+}
+
+function enter() {
+
 }
 
 // function to activate controls via arrow tabs on keyboard
 // When listener hears arrow keys_ship moves as per key direction
- window.addEventListener('keydown', (e) => {
-  
+window.addEventListener('keydown', (e) => {
+
   switch (true) {
     case (e.key === 'ArrowLeft'):
       moveleft();
       break;
     case (e.key === 'ArrowRight'):
-    moveright();
+      moveright();
       break;
     case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0):
       ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
@@ -151,10 +154,10 @@ function pressSpaceBar(){
       ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
       break;
     case (e.key === 'Enter'):
-      pressEnter();   
+      pressEnter();
       break;
     case (e.key === ' '):
       pressSpaceBar();
-    break;
+      break;
   }
 })
