@@ -283,8 +283,7 @@ By forking the GitHub Repository, a copy of the repository can be viewed or amen
 
 
 
-* Linuxhint *[Linuxhint](https://linuxhint.com/html-meta-tag/)* - This assisted with gaining further knowledge around meta tags.
-* Navigation Menu *[Love Running](https://codeinstitute.net/ie/)* - This element was influenced by the Love Running module tutorial.
+* Linuxhint *[Linuxhint](https://linuxhint.com/html-meta-tag/)* - This assisted with gaining further knowledge around meta tags.s
 * Markdown Guide *[Markdown Guide](https://www.markdownguide.org/basic-syntax/)* - This was used to understand the basic syntax for Markdown.
 * Youtube *[Youtube - ]()* - 
 
