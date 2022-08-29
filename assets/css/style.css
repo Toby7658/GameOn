@@ -150,6 +150,7 @@
     bottom: 0;
     left: 2%;
     justify-content: space-between;
+    bottom: 10px;
   }
 
   .laser {
@@ -204,6 +205,7 @@
     bottom: 0;
     left: 2%;
     justify-content: space-between;
+    bottom: 20px;
   }
 
   .laser {
