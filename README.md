@@ -1,14 +1,15 @@
 # **_GameOn_**
 
-Game On is an archade type game which is inspired by Space Invaders. This is an interactive
-game for the user to shoot bullets from a spacerocket at the invading space aliens. The player gains
+Game On is inspired by the 1978 shoot 'em up arcade game which was originally
+developed by Tomohiro Nishikado. This version is an interactive game for 
+the user to shoot bullets from a spacerocket at the invading space aliens. The player gains
 points for each alien they hit. The game is aimed at all age groups and is designed to allow 
 immediate access to the game upon pressing enter. The game is available using keyboard
 for desktops and touch screen for tablet and mobile devices.
 
 ![Hero image](./assets/documentation/heror-image.png)
 
-Link to live site - [Game On](#)
+Link to live site - [Game On](https://toby7658.github.io/gameon/)
 
 # Table of Contents
 
@@ -97,12 +98,17 @@ Link to live site - [Game On](#)
 ## Wireframe
 The mock-up for this project was created using [Balsamiq](https://balsamiq.com/wireframes/).
 
+### Game Waiting screen to Start for wide screen devise
+![Wireframe image home page](assets/documentation/game-load-wide.png)
 
-### Game Page for wide screen devise
-![Wireframe image home page]()
+### Game Play screen for wide screen devise
+![Wireframe image home page](assets/documentation/game-on-wide.png)
+
+### Game Waiting screen to Start for small screen devise
+![Wireframe image home page](assets/documentation/mobile-splash.png)
 
 ### Game Page for small screen devise
-![Wireframe image home page](./assets/images/documentation/wireframe-home-small.jpg)
+![Wireframe image home page](assets/documentation/gameon-mobile.png)
 
 [Back to top](<#Table-of-Contents>)
 
