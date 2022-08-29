@@ -1,108 +1,317 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **_GameOn_**
 
-Welcome Toby7658,
+Game On is an archade type game which is inspired by Space Invaders. This is an interactive
+game for the user to shoot bullets from a spacerocket at the invading space aliens. The player gains
+points for each alien they hit. The game is aimed at all age groups and is designed to allow 
+immediate access to the game upon pressing enter. The game is available using keyboard
+for desktops and touch screen for tablet and mobile devices.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Hero image](./assets/documentation/heror-image.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Link to live site - [Game On](#)
 
-## Gitpod Reminders
+# Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [**User Experience UX**](<#user-experience-ux>)
+    * [User Interaction](<#user-interaction>)
+    * [User Stories](#user-stories>)
+    * [Wireframe](<#wireframe>)
+    * [Structure of Site](<#structure-of-site>)
+    * [Typography](<#typography>)
+    * [Colour Scheme](<#colour-scheme>)
 
-`python3 -m http.server`
+* [**Existing Features**](<#existing-features>)
+    * [Navigation Menu](<#navigation-menu>)
+    * [Hamburger Bar](<#hamburger-bar>)
+    * [Logo](<#logo>)
+    * [Hero Image](<#hero-image>)
+    * [Navigation Blocks](<#navigation-blocks>)
+    * [Social Media](<#social-media>)
+    * [Videos](<#videos>)
+    * [Maps](<#maps>)
+    * [Contact Us](<#contact-us>)
+    * [Form Submission](<#form-submission>)
+    * [About Us](<#about-us>)
+    * [Footer](<#footer>)
 
-A blue button should appear to click: _Make Public_,
+* [**Future Features**](<#future-features>)
 
-Another blue button should appear to click: _Open Browser_.
+* [**Technologies Used**](<#technologies-used>)
+  * [HTML](#html)
+  * [CSS](#css)
+  * [Google Fonts](#google-fonts)
+  * [Font Awesome Icons](#font-awesome-icons)
+  * [balsamiq](#balsamiq)
+  * [GitHub](#gitHub)
+  * [Git](#git)
+  * [Gitpod](#gitpod)
+  * [Adobe Color](#adobe-color)
+  * [Gimp](#gimp)
+  * [Slack](#slack)
+  * [Visual Studio](#visual-studio)
+  * [volusion](#volusion) 
+  * [pxhere](#pxhere)
+  * [Google Maps](#google-maps)
+  * [Youtube](#youtube)
+  * [Code Institute](#code-institute)
+  * [Google Images](#google-images)
+  * [Grammarly](#grammarly)
+ 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [**Testing**](<#testing>)
 
-A blue button should appear to click: _Make Public_,
+  * [Lighthouse](#lighthouse)
+  * [WebPageTest](#webpagetest)
+  * [W3Markup Validation Service](#w3markup-validation-service)
+  * [W3CSS Validation Service](#w3css-validation-service)
 
-Another blue button should appear to click: _Open Browser_.
+* [**W3 Validation Results**](#w3-validation-results)
+* [**Lighthouse Testing Desktop Results**](#lighthouse-testing-desktop-results)
+* [**Lighthouse Testing Mobile Results**](#lighthouse-testing-mobile-results)
+* [**Webpagetest**](#webpagetest)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [**Bugs and Errors**](<#bugs-and-errors>)
 
-To log into the Heroku toolbelt CLI:
+* [**Deployment**](<#deployment>)
+* [Forking the GitHub Repository](#forking-the-gitHub-repository)
+* [Cloning the Github Repository](#cloning-the-github-repository)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [**Credits**](<#credits>)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* [**Code Used**](<#code-used>)
+  * [HTML](#html)
+  * [CSS](#css)
+  * [Java Script](#java-script)
 
-------
+* [**Acknowledgment**](<#Acknowledgment>)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# User Experience UX
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## User Interaction
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## User Stories
+* As a user, 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Wireframe
+The mock-up for this project was created using [Balsamiq](https://balsamiq.com/wireframes/).
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Game Page for wide screen devise
+![Wireframe image home page]()
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Game Page for small screen devise
+![Wireframe image home page](./assets/images/documentation/wireframe-home-small.jpg)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to top](<#Table-of-Contents>)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Structure of Site
+The site is made up of eight pages. They are constructed of:
+1. * [Game page HTML](index.html)
+2. * [Game page CSS](index.html)
+3. * [Game page Java Script](index.js)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# Game Overview
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Back to top](<#Table-of-Contents>)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+# Typography
+ Fonts were taken from [Google Fonts](https://fonts.google.com/).
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to top](<#Table-of-Contents>)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Colour Scheme
+The colour scheme is inspired by 
 
-------
+The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/color-wheel) and [HTML CSS Color Picker](https://www.htmlcsscolor.com/).
 
-## FAQ about the uptime script
+# Game Colours:
+![Colour #e2eecc]()
+![Colour #e2eecc]()
+![Colour #e2eecc]()
+![Colour #e2eecc]()
 
-**Why have you added this script?**
+[Back to top](<#Table-of-Contents>)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Existing Features
 
-**How will this affect me?**
+## Keyboard Arrows
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Score
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[Back to top](<#Table-of-Contents>)
 
-**So….?**
+## Logo
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Logo Image]()
 
-**Can I opt out?**
+[Back to top](<#Table-of-Contents>)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Hero Image
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+ [Back to top](<#Table-of-Contents>)
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Future Features
 
----
 
-Happy coding!
+[Back to top](<#Table-of-Contents>)
+
+## Technologies Used
+  * [HTML](https://en.wikipedia.org/wiki/HTML5) - 
+  * [CSS](https://en.wikipedia.org/wiki/CSS) - 
+  * [Java Script](https://en.wikipedia.org/wiki/JavaScript) - 
+  * [Google Fonts](https://fonts.google.com/) - 
+  * [balsamiq](https://balsamiq.com/wireframesgclid=CjwKCAjwi8iXBhBeEiwAKbUoferdHodwIX8rhZQq6jDFB9i1ffpeC04Iv0ROTwgZLHrOEP1rmCqzjhoCUsMQAvD_BwE) - 
+  * [GitHub](https://github.com/about) - 
+  * [Git](https://git-scm.com/) - 
+  * [Gitpod](https://www.gitpod.io/) -
+  * [Adobe Color](https://color.adobe.com/create/color-wheel) - 
+  * [Gimp](https://www.gimp.org/) - 
+  * [Slack](https://slack.com/intl/en-ie/) - 
+  * [Visual Studio](https://visualstudio.microsoft.com/) -
+  * [Youtube](https://www.youtube.com/) - 
+  * [Code Institute](https://codeinstitute.net/ie/) - 
+  * [Google Images](https://images.google.com/) - 
+  * [HTML CSS Color Picker](https://www.htmlcsscolor) - This site was accessed to assist with defining colour.
+  * [Grammarly](https://app.grammarly.com/) - This site was used to complete a spell check throughout the site and readme file.
+
+
+[Back to top](<#Table-of-Contents>) 
+ 
+## Testing
+- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
+- [WebPageTest](https://www.webpagetest.org/)
+- [W3Markup Validation Service](https://validator.w3.org/)
+- [W3CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+## W3 Validation Results:
+* Game Page html - [Error Free Home Page]()
+* CSS - [Error Free CSS](/assets/images/documentation/error-free-css.jpg)
+
+## Lighthouse Testing Desktop Results:
+* Game Page Html - [Lighthouse Validation Home Page]()
+
+## Lighthouse Testing Mobile Results:
+* Game Page html - [Lighthouse Validation Home Page]()
+
+
+## Webpagetest
+* Results - Passed
+
+
+Chrome - 
+Firefox - 
+
+[Back to top](<#Table-of-Contents>)
+
+## Bugs and Errors
+1. The ALT text adds a text description to an image on a Web page, and should be used for all images, graphical bullets, and graphical horizontal rules. Initially, Alt was included in the video and map iframe, however, this brought the Lighthouse Validation score down and created errors within W3 Validator. Once this was removed, the score increased and W3 stated error free.
+
+![W3 Validator Error](./assets/images/documentation/error-w3-validator-alt.jpg)
+
+![W3 Validator Error-Free](./assets/images/documentation/error-w3-validator-fixed.jpg)
+
+2. Upon adding the back button on the submit page, the button became cut off when resizing to a smaller devise:
+
+
+![Button back for mobile](./assets/images/documentation/error-submitmobile-cutoff.jpg)
+
+Issue was corrected by re-using the css for the contact page submit button:
+
+![Button back for mobile](./assets/images/documentation/error-submitmobile-fixed.jpg)
+
+3. When validating the Visit pages on Lighthouse, errors appeared for all iframes. It was noted that height and width 
+were set as a percentage and were coming up as an error. The height and width were changed to " " which solved the immediate issue. This then caused an issue with the map overlapping with the video upon decreasing the screen size. This issue was fixed by reducing the size of the map and video for a smoother transition when resizing.
+
+4. Github Error - When pushing commits to the repository, a warning appeared advising a file, core.3260 was too big. 
+I was unsure what this file was or where it came from. I researched online, however, this did not assist with understanding the problem. I reached out to the Stack Community and was advised it was cashed files. I undertook further research online and attempted to .gitignore, however, the file seemed to be stuck between a commit and a push.
+I was unable to resolve the issue so I completed a gitlog and went through commits to see where the issue arose. 
+I was then able to complete a gitreset --hardcode to the point where I would not lose vital information but be able to 
+go back to a point where I could again push commits. This issue was then resolved and I could commit and push commits as usual.
+
+## Learning
+* The need for "git status" is required to see what is waiting in line.
+* The need for "gitlog" to see and track all commits to date.
+* The need for "git add" as opposed to "git add ." to ensure I am committing what I need as opposed to all waiting in line.
+* The need for "git reset --hard code" - Only to be used with care so as not to lose valuable information. 
+* Keep the server down while saving changes as the server may be running other small programs in the background.
+
+![Github Error](./assets/images/documentation/error.jpg)
+
+
+ [Back to top](<#Table-of-Contents>)
+
+## Deployment
+1. Access *[Github](https://github.com/)* by signing into an account
+2. Access the Repository on the top-right-hand corner of the screen
+3. Select the Repository required from the list
+4. Click 'Settings' on the menu tab
+5. On the left-hand-side of the next page, click 'Pages'
+6. Under source, select branch: main, folder: root, and then click save. 
+7. Once saved, the site will take time to refresh while it goes public. 
+8. A link will appear stating (eg. of my account): Your site is live at https://toby7658.github.io/History-Onics/
+
+## Forking the GitHub Repository 
+By forking the GitHub Repository, a copy of the repository can be viewed or amended without affecting the original repository.
+1. Log into GitHub to access the GitHub Repository,
+2. At the top-right-hand side of the screen, locate "Fork",
+3. Click on the "Fork" tab,
+4. You now have a copy of the original repository in your GitHub account.
+
+## Cloning the Github Repository 
+1. Log into GitHub to access the GitHub Repository,
+2. Under the settings button, click on the tab "Code",
+3. This will open a dropdown box,
+4. To clone using HTTPS, copy the link provided under this tab,
+5. Access the desired IDE (eg. Visual Studio),
+6. Type git clone, followed by the copied URL,
+7. Press enter - this has now create your clone in the desired IDE.
+
+[Back to top](<#Table-of-Contents>)
+
+## Credits
+
+* Mentor support and guidance from *[Jack Wachira](https://github.com/iamjackwachira)*.
+
+* Facilitator and support from *[Kenan Wright](https://github.com/KenanCarlWright/KenanCarlWright)*.
+* Facilitator and support from *[Kasia Bogucka](https://github.com/bezebee)*.
+
+* W3C School CSS Tutorial *[W3C School CSS Tutorial](https://www.w3schools.com/css/)* - Used for additional learning around the over-all basics of CSS.
+
+
+
+* Linuxhint *[Linuxhint](https://linuxhint.com/html-meta-tag/)* - This assisted with gaining further knowledge around meta tags.
+* Navigation Menu *[Love Running](https://codeinstitute.net/ie/)* - This element was influenced by the Love Running module tutorial.
+* Markdown Guide *[Markdown Guide](https://www.markdownguide.org/basic-syntax/)* - This was used to understand the basic syntax for Markdown.
+* Youtube *[Youtube - ]()* - 
+
+
+
+* Github *[Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)* - This information assisted with understanding the syntax of Markdown.
+
+
+
+
+
+
+
+
+
+ [Back to top](<#Table-of-Contents>)
+
+## Code Used
+ * [HTML](https://en.wikipedia.org/wiki/HTML5)
+ * [CSS](https://en.wikipedia.org/wiki/CSS)
+ * [Java Script](https://en.wikipedia.org/wiki/JavaScript)
+
+ [Back to top](<#Table-of-Contents>)
+
+## Acknowledgment
+Many thanks to my Mentor *[Jack Wachira](https://github.com/iamjackwachira)* for providing solid guidance
+and support. Thanks to Code Institute for giving me such an amazing opportunity to develop a new career
+in such a supportive environment. Thanks to the community on Slack who are an ongoing wealth of information and motivation. 
+
+[Back to top](<#Table-of-Contents>)
