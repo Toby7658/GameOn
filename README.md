@@ -20,6 +20,8 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
     * [Structure of Site](<#structure-of-site>)
     * [Typography](<#typography>)
     * [Colour Scheme](<#colour-scheme>)
+    * [Game Scheme](<#colour-scheme>)
+    * [Game Characters](<#game-characters>)
 
 * [**Existing Features**](<#existing-features>)
     * [Navigation Menu](<#navigation-menu>)
@@ -135,8 +137,6 @@ The site is made up of eight pages. They are constructed of:
 1. * [Game page HTML](index.html)
 2. * [Game page CSS](assets/css/style.css)
 3. * [Game page Java Script](assets/js/index.js)
-
-# Game Overview
 
 [Back to top](<#Table-of-Contents>)
 
