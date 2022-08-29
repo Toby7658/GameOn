@@ -144,6 +144,8 @@ The site is made up of eight pages. They are constructed of:
  The font aim for this game is to provide a retro arcade vibe.
  The font chosen is Silkscreen for the arcade style font and Sans-serif as a fall-back
  should Silkscreen nolonger be available. Fonts were taken from [Google Fonts](https://fonts.google.com/).
+ ![Logo](assets/documentation/gameon-logo.png)
+ ![Splash](assets/documentation/splash-typog.png)
 
 [Back to top](<#Table-of-Contents>)
 
