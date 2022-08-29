@@ -23,7 +23,7 @@ function playAudio(what) {
   canvas.appendChild(sound);
   */
 
-  
+
   if (what === "blast") {
     document.getElementById('blast').play();
   }
@@ -138,6 +138,18 @@ function moveRight() {
 
 }
 
+function moveUp() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0) {
+    ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
+  }
+}
+
+function moveDown() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100) {
+    ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
+  }
+}
+
 function pressEnter() {
   if (start === 1) {
     document.getElementById("splash").remove(); // alert the user to press Enter to start game
@@ -162,11 +174,11 @@ window.addEventListener('keydown', (e) => {
     case (e.key === 'ArrowRight'):
       moveRight();
       break;
-    case (e.key === 'ArrowUp' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0):
-      ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
+    case (e.key === 'ArrowUp'):
+      moveUp();
       break;
-    case (e.key === 'ArrowDown' && parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight):
-      ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
+    case (e.key === 'ArrowDown'):
+      moveDown();
       break;
     case (e.key === 'Enter'):
       pressEnter();
