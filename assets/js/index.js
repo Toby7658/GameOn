@@ -13,6 +13,7 @@ function letsPlay() {
   multiplyAlien();
 }
 
+// sound for blast when alien is hit
 function playAudio(what) {
   /*var sound = document.createElement("AUDIO");
   sound.id='blast';  
@@ -22,7 +23,7 @@ function playAudio(what) {
   canvas.appendChild(sound);
   */
 
-  // sound for blast when alien is hit
+  
   if (what === "blast") {
     document.getElementById('blast').play();
   }
@@ -58,6 +59,7 @@ function kill(b) {
     }
   }
 }
+
 
 /*function moveBullet() {
   moveLaser = setInterval(() => {
@@ -121,6 +123,7 @@ function moveAlien() {
   }, 1000);
 }
 
+// function for arrow buttons to direct movement of hero rocketship
 
 function moveLeft() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
