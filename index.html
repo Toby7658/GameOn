@@ -2,47 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Shooting game">
-    <meta name="keywords" content="Game, Retro, Archade, Spaceship">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4d5ee1f52b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>Game On</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Shooting game">
+  <meta name="keywords" content="Game, Retro, Archade, Spaceship">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4d5ee1f52b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <title>Game On</title>
 </head>
 
-<!-- game set on canvas -->
+<!-- game set within a canvas -->
 <body id="canvas">
-    <h1 class="header">Game On</h1>
-<!-- splash text disappears when press enter -->
-    <div id="splash">Press Enter to Start</div>
-<!-- controls for arrow keys and touch screen -->
-    <div class="mobilecontrol">
-        <button class="buttonleft" onclick="moveLeft()">&#8592;</button>
-        <button class="buttonspace"onclick="pressSpaceBar()">Shoot</button>
-        <button class="buttonright" onclick="moveRight()">&#8594;</button>]
-        <button class="buttonenter" onclick="pressEnter()">Enter</button>
-      </div>
+  <h1 class="header">Game On</h1>
+
+  <!-- div created for splash text which disappears when press enter -->
+  <div id="splash">Press Enter to Start</div>
+
+  <!-- div created for controls for arrow keys and touch screen -->
+  <div class="mobilecontrol">
+    <button class="buttonleft" onclick="moveLeft()">&#8592;</button>
+    <button class="buttonspace" onclick="pressSpaceBar()">Shoot</button>
+    <button class="buttonright" onclick="moveRight()">&#8594;</button>]
+    <button class="buttonenter" onclick="pressEnter()">Enter</button>
+  </div>
 
 
-    <audio id="music"></audio>
-    
-    <div id="rocketship"></div>
+  <audio id="music"></audio>
 
-    <div class="aliengirl"></div>
-    <!-- <div id="rocketship"></div> -->
-    <div id="score">0</div>
-    <audio id="blast">
-        <source src="/assets/audio/blast.wav" type="audio/wav">
-      Your browser does not support the audio element.
-      </audio>
-      <audio id="gameover">
-        <source src="/assets/audio/gameover.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-    <script src="assets/js/index.js" type="text/javascript">
-    </script>
+  <!-- div created for hero rocketship -->
+  <div id="rocketship"></div>
+
+  <!-- dic created for enemy alien ship -->
+  <div class="aliengirl"></div>
+
+  <!-- div created for score at top right of screen -->
+  <div id="score">0</div>
+
+  <!-- audio created for blast sound at bullet impact on enemy -->
+  <audio id="blast">
+    <source src="/assets/audio/blast.wav" type="audio/wav">
+  </audio>
+
+  <!-- audio created for game over sound when user loses game -->
+  <audio id="gameover">
+    <source src="/assets/audio/gameover.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="assets/js/index.js" type="text/javascript">
+  </script>
 
 
 </body>
