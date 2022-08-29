@@ -70,34 +70,33 @@
   position: absolute;
   margin: 10px;
   top: 250px;
-  font-size: 7em;
+  font-size: 6em;
   text-align: center;
 }
 
 /* style for touch screen controls */
 .mobilecontrol {
-  text-align: center;
   display: inline-block;
-  position: absolute;
-  bottom: 20px;
-
+  zoom: 1;
+  width: 100%;
+  justify-content: space-between;
 }
 
 /* style inactive arrow icons for large screen */
-.iconcontrol {
+/* .iconcontrol {
   position: absolute;
   margin: 10px;
   bottom: 0px;
   left: 2%;
   z-index: 3;
   text-align: center;
-}
+} */
 
 /* media queries for devises with max width of 480px */
 
 @media screen and (min-width: 200px) and (max-width: 480px) {
   .header {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #splash {
@@ -115,10 +114,12 @@
     width: 50px;
     height: 50px;
     font-size: 30px;
+    top: 30px;
   }
 
   #score {
-    font-size: 20px;
+    font-size: 30px;
+    top: 0px;
   }
 
   .mobilecontrol {
@@ -143,7 +144,7 @@
 
 @media screen and (min-width: 481px) and (max-width: 640px) {
   .header {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #splash {
@@ -164,7 +165,7 @@
   }
 
   #score {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .mobilecontrol {
