@@ -90,6 +90,18 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
 # User Experience UX
 
 ## User Interaction
+Game On is an interactive shooting game which allows the user to use the arrow keys and spacebar on their
+keyboard to move and shoot aliens with a rocketship. The user can identify the hero ship at the bottom of the 
+screen and can move left, right, up, down with the arrow keys and shoot using the spacebar. 
+The user is provided with a splash alert upon opening the game, which instructs the user
+to press ENTER TO START and following this, instructions to use the arrow keys to move and
+spacebar to shoot. The user can view their score at the top right-hand-side of 
+the screen and this increases in numbers as the user kills aliens; the aliens disappear once hit.
+The user can identify the alien targets at the top of the screen; the aliens fall at random and multiply 
+as they fall towards the ship. 
+Sound has been placed on the end of the game which alerts the user when the game has ended and the user has lost. The game will end only when the user loses. Sound has been placed on the hit impact of the alien
+which provides the user with a better experience as they progress through the game.
+
 
 
 ## User Stories
@@ -121,8 +133,8 @@ The mock-up for this project was created using [Balsamiq](https://balsamiq.com/w
 # Structure of Site
 The site is made up of eight pages. They are constructed of:
 1. * [Game page HTML](index.html)
-2. * [Game page CSS](index.html)
-3. * [Game page Java Script](index.js)
+2. * [Game page CSS](assets/css/style.css)
+3. * [Game page Java Script](assets/js/index.js)
 
 # Game Overview
 
