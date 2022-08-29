@@ -75,24 +75,34 @@
 }
 
 /* style for touch screen controls */
- .mobilecontrol {
+.mobilecontrol {
   text-align: center;
   display: inline-block;
   position: absolute;
   bottom: 20px;
 
-} 
+}
+
+/* style inactive arrow icons for large screen */
+.iconcontrol {
+  position: absolute;
+  margin: 10px;
+  bottom: 0px;
+  left: 2%;
+  z-index: 3;
+  text-align: center;
+}
 
 /* media queries for devises with max width of 480px */
 
- @media screen and (min-width: 200px) and (max-width: 480px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   .header {
     font-size: 20px;
   }
 
   #splash {
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
   }
 
   #rocketship {
@@ -116,12 +126,16 @@
     display: inline-block;
     position: absolute;
     bottom: 10px;
-} 
+  }
 
-.laser {
-  height: 20px;
-  width: 20px;
-}
+  .laser {
+    height: 20px;
+    width: 20px;
+  }
+
+  .iconcontrol {
+    display: none;
+  }
 
 }
 
@@ -158,12 +172,16 @@
     display: inline-block;
     position: absolute;
     bottom: 20px;
-}
+  }
 
-.laser {
-  height: 20px;
-  width: 20px;
-}
+  .laser {
+    height: 20px;
+    width: 20px;
+  }
+
+  .iconcontrol {
+    display: none;
+  }
 }
 
 /* media queries for devises with max width of 1200px */
@@ -192,22 +210,22 @@
   }
 
   #score {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .mobilecontrol {
     display: none;
-    
+
   }
-} 
+}
 
 /* media queries for devises with max width of 3000px */
 
 @media screen and (min-width: 1200px) and (max-width: 3000px) {
-  
+
   .mobilecontrol {
     display: none;
-    
+
   }
 
   #splash {

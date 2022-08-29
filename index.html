@@ -17,16 +17,27 @@
   <h1 class="header">Game On</h1>
 
   <!-- div created for splash text which disappears when press enter -->
-  <div id="splash">Press Enter to Start</div>
+  <div id="splash">Press Enter to Start<br/><br/><br/>Press Arrow Keys to Move<br/>Press Spacebar to Shoot</div>
 
   <!-- div created for controls for arrow keys and touch screen -->
   <div class="mobilecontrol">
     <button class="buttonleft" onclick="moveLeft()">&#8592;</button>
-    <button class="buttonspace" onclick="pressSpaceBar()">Shoot</button>
+    <button class="buttonspace" onclick="pressSpaceBar()">Spacebar</button>
     <button class="buttonright" onclick="moveRight()">&#8594;</button>]
     <button class="buttonenter" onclick="pressEnter()">Enter</button>
   </div>
 
+  <!-- inactive icons to display arrow key direction -->
+  <div class="iconcontrol">
+    <i style='font-size:24px' class='fas'>&#xf35b;</i>
+  </br>
+</br>
+<i style='font-size:24px' class='fas'>&#xf359;</i>
+  <i style='font-size:24px' class='fas'>&#xf35a;</i>
+  </br>
+</br>
+  <i style='font-size:24px' class='fas'>&#xf0ab;</i>
+  </div>
 
   <audio id="music"></audio>
 
