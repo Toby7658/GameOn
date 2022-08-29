@@ -93,7 +93,13 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
 
 
 ## User Stories
-* As a user, 
+* As a user, I want a retro game that that is set in space.
+* As a user, I want to use my keyboard to direct the game hero character.
+* As a user, I want a game which scores points as I play and interact.
+* As a user, I want a game which is similiar to an old arcade game.
+* As a user, I want to hear sound effects as I hit characters.
+* As a user, I want to a game that I can play on touch screen small devices.
+
 
 ## Wireframe
 The mock-up for this project was created using [Balsamiq](https://balsamiq.com/wireframes/).
