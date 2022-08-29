@@ -151,9 +151,8 @@ The site is made up of eight pages. They are constructed of:
 
 # Colour Scheme
 The colour scheme is inspired by the 1978 shooting game, Space Invaders. However, 
-the aim was not to copy the original game but to create a similar 
-template which requires a simple colour scheme.
-The background [image](https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/) of a dark navy space with distant stars was used to replace the original black screen. The text remains the original #FFFFFF. The Alien character, which are originally white, has been replaced with an image of a spaceship. The heroship, which was originally green, has been replaced by an image of a [rocketship[(https://opengameart.org/art-search?keys=laser&page=2)]. 
+the aim was not to copy the original game but to create a similar template which requires a simple colour scheme.
+The background [image](https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/) of a dark navy space with distant stars was used to replace the original black screen. The text remains the original #FFFFFF. The Alien character, which are originally white, has been replaced with an image of an alien in a spaceship. The heroship, which was originally green, has been replaced by an image of a [rocketship](https://opengameart.org/art-search?keys=laser&page=2). 
 The [bullets](https://opengameart.org/art-search?keys=laser&page=2) (or lasers) which shoot the aliens, is also an image used.
 
 The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/color-wheel) and [HTML CSS Color Picker](https://www.htmlcsscolor.com/).
@@ -164,7 +163,14 @@ The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/col
 
 [Back to top](<#Table-of-Contents>)
 
-# Existing Features
+# Game Characters
+As discussed, the aim of this game was to provide a similar style to the original Space Invaders
+arcade game. The characters, however, have been updated. The Heroship has been replaced with a
+more up-to-date rocketship and the alien invadors have been updated with an image of an alien in a spaceship.
+The bullets (laser) image provides a more impressive shooting experience, albeit, continues to be inkeeping
+with the arcade experience of the game.
+![Rocketship](/assets/images/shipimage.png)
+![Alienship](/assets/images/alienship.png)
 
 ## Keyboard Arrows
 
