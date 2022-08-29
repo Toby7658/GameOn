@@ -1,5 +1,8 @@
+/* importing font style from google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Domine&family=Ibarra+Real+Nova:wght@500&family=Lato:wght@300&family=Oswald&family=PT+Sans&family=Roboto+Slab:wght@300&family=Silkscreen&display=swap');
 
+/* game is within a canvas */
 #canvas {
   display: flex;
   flex-direction: column;
@@ -10,6 +13,7 @@
   background-image: url("/assets/images/spc_background.png");
 }
 
+/* style for gameon header */
 .header {
   position: absolute;
   margin: 10px;
@@ -19,6 +23,7 @@
   z-index: 3;
 }
 
+/* style for bullets shot from ship  */
 .laser {
   position: absolute;
   width: 30px;
@@ -28,6 +33,7 @@
   background-repeat: no-repeat;
 }
 
+/* style for alien ship */
 .aliengirl {
   position: absolute;
   top: 30px;
@@ -38,7 +44,7 @@
   background-repeat: no-repeat;
 }
 
-
+/* style for heroship */
 #rocketship {
   position: absolute;
   width: 100px;
@@ -49,6 +55,7 @@
   bottom: 0px;
 }
 
+/* style for score at top right of screen */
 #score {
   position: absolute;
   margin: 10px;
@@ -58,7 +65,7 @@
   z-index: 2;
 }
 
-
+/* style for splash message to alert user to press enter to start */
 #splash {
   position: absolute;
   margin: 10px;
@@ -67,6 +74,7 @@
   text-align: center;
 }
 
+/* style for touch screen controls */
  .mobilecontrol {
   text-align: center;
   display: inline-block;
@@ -75,12 +83,7 @@
 
 } 
 
-
-
-
-
-
-/* media queries */
+/* media queries for devises with max width of 480px */
 
  @media screen and (min-width: 200px) and (max-width: 480px) {
   .header {
@@ -122,6 +125,8 @@
 
 }
 
+/* media queries for devises with max width of 640px */
+
 @media screen and (min-width: 481px) and (max-width: 640px) {
   .header {
     font-size: 20px;
@@ -161,6 +166,7 @@
 }
 }
 
+/* media queries for devises with max width of 1200px */
 
 @media screen and (min-width: 641px) and (max-width: 1200px) {
   .header {
@@ -195,6 +201,7 @@
   }
 } 
 
+/* media queries for devises with max width of 3000px */
 
 @media screen and (min-width: 1200px) and (max-width: 3000px) {
   
