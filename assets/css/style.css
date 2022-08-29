@@ -6,7 +6,7 @@
 #canvas {
   display: flex;
   flex-direction: column;
-  font-family: "Silkscreen";
+  font-family:'Silkscreen','sans-serif';
   align-items: center;
   color: white;
   margin: 0;

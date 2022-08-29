@@ -1,6 +1,6 @@
 # **_GameOn_**
 
-Game On is inspired by the 1978 shoot 'em up arcade game which was originally
+Game On is inspired by the 1978 shoot 'em up arcade game, Space Invaders, which was originally
 developed by Tomohiro Nishikado. This version is an interactive game for 
 the user to shoot bullets from a spacerocket at the invading space aliens. The player gains
 points for each alien they hit. The game is aimed at all age groups and is designed to allow 
@@ -141,20 +141,24 @@ The site is made up of eight pages. They are constructed of:
 [Back to top](<#Table-of-Contents>)
 
 # Typography
- Fonts were taken from [Google Fonts](https://fonts.google.com/).
+ The font aim for this game is to provide a retro arcade vibe.
+ The font chosen is Silkscreen for the arcade style font and Sans-serif as a fall-back
+ should Silkscreen nolonger be available. Fonts were taken from [Google Fonts](https://fonts.google.com/).
 
 [Back to top](<#Table-of-Contents>)
 
 # Colour Scheme
-The colour scheme is inspired by 
+The colour scheme is inspired by the 1978 shooting game, Space Invaders. However, 
+the aim was not to copy the original game but to create a similar 
+template which requires a simple colour scheme.
+The background [image](https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/) of a dark navy space with distant stars was used to replace the original black screen. The text remains the original #FFFFFF. The Alien character, which are originally white, has been replaced with an image of a spaceship. The heroship, which was originally green, has been replaced by an image of a [rocketship[(https://opengameart.org/art-search?keys=laser&page=2)]. 
+The [bullets](https://opengameart.org/art-search?keys=laser&page=2) (or lasers) which shoot the aliens, is also an image used.
 
 The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/color-wheel) and [HTML CSS Color Picker](https://www.htmlcsscolor.com/).
 
 # Game Colours:
-![Colour #e2eecc]()
-![Colour #e2eecc]()
-![Colour #e2eecc]()
-![Colour #e2eecc]()
+![Colour #FFFFFF](/assets/documentation/white-colour.png)
+![background Image](/assets/images/spc_background.png)
 
 [Back to top](<#Table-of-Contents>)
 
