@@ -171,6 +171,7 @@ The bullets (laser) image provides a more impressive shooting experience, albeit
 with the arcade experience of the game.
 ![Rocketship](/assets/images/shipimage.png)
 ![Alienship](/assets/images/alienship.png)
+![laser](/assets/images/bulletimage.png)
 
 ## Keyboard Arrows
 
