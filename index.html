@@ -13,19 +13,27 @@
 </head>
 
 <!-- game set within a canvas -->
+
 <body id="canvas">
   <h1 class="header">Game On</h1>
 
   <!-- div created for splash text which disappears when press enter -->
-  <div id="splash">Press Enter to Start<br/><br/>Press Arrow Keys to Move<br/>Press Spacebar to Shoot</div>
+  <div id="splash">Press Enter to Start<br /><br />Press Arrow Keys to Move<br />Press Spacebar to Shoot</div>
 
   <!-- div created for controls for arrow keys and touch screen -->
-  <div class="mobilecontrol">
+
+  <!-- <div class="mobilecontrol">
     <button onclick="moveUp()">&#8593;</button><br><br>
     <button onclick="moveLeft()">&#8592;</button>
      <button onclick="moveRight()">&#8594;</button><br><br>
      <button onclick="moveDown()">&#8595;</button><br>
-     
+  </div> -->
+
+  <div class="touchcontrol">
+    <button onclick="moveUp()">&#8593;</button>
+    <button onclick="moveLeft()">&#8592;</button>
+    <button onclick="moveRight()">&#8594;</button>
+    <button onclick="moveDown()">&#8595;</button>
   </div>
 
   <div class="controlenter">
@@ -33,7 +41,7 @@
     <button onclick="pressSpaceBar()">Spacebar</button><br><br>
   </div>
 
- 
+
 
   <!-- inactive icons to display arrow key direction for large screen
   <div class="iconcontrol">
@@ -59,12 +67,12 @@
   <!-- audio music over game in a loop -->
   <audio id="music"></audio>
 
-    <!-- audio created for blast sound at bullet impact on enemy -->
-    <audio id="start">
-      <source src="#" type="audio/mpeg">
-    </audio>
+  <!-- audio created for blast sound at bullet impact on enemy -->
+  <audio id="start">
+    <source src="#" type="audio/mpeg">
+  </audio>
 
-    <!-- ************************************************************** -->
+  <!-- ************************************************************** -->
 
   <!-- audio created for blast sound at bullet impact on enemy -->
   <audio id="blast">
