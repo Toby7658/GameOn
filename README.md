@@ -17,25 +17,13 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
     * [User Interaction](<#user-interaction>)
     * [User Stories](#user-stories>)
     * [Wireframe](<#wireframe>)
-    * [Structure of Site](<#structure-of-site>)
+    * [Code Structure of Site](<#code-structure-of-site>)
     * [Typography](<#typography>)
     * [Colour Scheme](<#colour-scheme>)
-    * [Game Scheme](<#colour-scheme>)
     * [Game Characters](<#game-characters>)
 
 * [**Existing Features**](<#existing-features>)
     * [Navigation Menu](<#navigation-menu>)
-    * [Hamburger Bar](<#hamburger-bar>)
-    * [Logo](<#logo>)
-    * [Hero Image](<#hero-image>)
-    * [Navigation Blocks](<#navigation-blocks>)
-    * [Social Media](<#social-media>)
-    * [Videos](<#videos>)
-    * [Maps](<#maps>)
-    * [Contact Us](<#contact-us>)
-    * [Form Submission](<#form-submission>)
-    * [About Us](<#about-us>)
-    * [Footer](<#footer>)
 
 * [**Future Features**](<#future-features>)
 
@@ -104,7 +92,7 @@ as they fall towards the ship.
 Sound has been placed on the end of the game which alerts the user when the game has ended and the user has lost. The game will end only when the user loses. Sound has been placed on the hit impact of the alien
 which provides the user with a better experience as they progress through the game.
 
-
+[Back to top](<#Table-of-Contents>)
 
 ## User Stories
 * As a user, I want a retro game that that is set in space.
@@ -114,26 +102,27 @@ which provides the user with a better experience as they progress through the ga
 * As a user, I want to hear sound effects as I hit characters.
 * As a user, I want to a game that I can play on touch screen small devices.
 
+[Back to top](<#Table-of-Contents>)
 
 ## Wireframe
 The mock-up for this project was created using [Balsamiq](https://balsamiq.com/wireframes/).
 
-### Game Waiting screen to Start for wide screen devise
+### Game Waiting screen for wide screen devise
 ![Wireframe image home page](assets/documentation/game-load-wide.png)
 
 ### Game Play screen for wide screen devise
 ![Wireframe image home page](assets/documentation/game-on-wide.png)
 
-### Game Waiting screen to Start for small screen devise
+### Game Waiting screen for small screen devise
 ![Wireframe image home page](assets/documentation/mobile-splash.png)
 
-### Game Page for small screen devise
+### Game Play for small screen devise
 ![Wireframe image home page](assets/documentation/gameon-mobile.png)
 
 [Back to top](<#Table-of-Contents>)
 
-# Structure of Site
-The site is made up of eight pages. They are constructed of:
+# Code Structure of Site
+The site is made up of one pages. It is constructed of the following languages:
 1. * [Game page HTML](index.html)
 2. * [Game page CSS](assets/css/style.css)
 3. * [Game page Java Script](assets/js/index.js)
@@ -174,7 +163,13 @@ with the arcade experience of the game.
 ![laser](/assets/images/bulletimage.png)
 
 ## Keyboard Arrows
-
+Tablet and phone screens are provided with touch screen buttons which allow the user
+to navigate and play the game without the use of a keyboard. The 'arrow buttons' are aligned to 
+the right, providing the user with directional movement, up, down, left, right, with use of their thumb.
+The left buttons, which consist of an 'enter button' and 'spacebar button', allows the user
+to start the game and shoot with the left thumb. The aim for this alignment, is to allow the user
+to play with minimum hand movement and maintain focus on the targets.
+![Touch Screen Interaction](/assets/documentation/arrowkeys-mobile.png)
 
 ## Score
 

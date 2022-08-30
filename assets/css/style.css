@@ -2,14 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Domine&family=Ibarra+Real+Nova:wght@500&family=Lato:wght@300&family=Oswald&family=PT+Sans&family=Roboto+Slab:wght@300&family=Silkscreen&display=swap');
 
-body {
-  overflow: hidden; /* Hide scrollbars */
-}
 
 /* game is within a canvas */
 #canvas {
-  display: flex;
+  
   overflow: hidden;
+  display: flex;
   flex-direction: column;
   font-family: 'Silkscreen', 'sans-serif';
   align-items: center;
