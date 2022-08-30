@@ -7,7 +7,7 @@ let ship = document.getElementById('rocketship');
 let start = 1;
 let moveBy = 20;
 
-//function to startGame 
+//function to startGame  
 function letsPlay() {
   moveAlien();
   multiplyAlien();
@@ -31,7 +31,7 @@ function playAudio(what) {
 // multiply aliens at random intervals using math.random
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
-    let alien = document.createElement("div");
+    let alien = document.createElement("div")
     alien.classList.add("aliengirl");
     alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // aliens fall width of screen
     canvas.appendChild(alien);
@@ -50,7 +50,7 @@ function kill(b) {
       parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50
-    ); {
+    ) {
       playAudio('blast'); // alien blast sound
       alienGirls[i].remove(); // alien disappears when hit 
       b.remove(); // bullet disappears
