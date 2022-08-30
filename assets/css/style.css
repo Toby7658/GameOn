@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Domine&family=Ibarra+Real+Nova:wght@500&family=Lato:wght@300&family=Oswald&family=PT+Sans&family=Roboto+Slab:wght@300&family=Silkscreen&display=swap');
 
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
 /* game is within a canvas */
 #canvas {
   display: flex;
@@ -88,10 +92,10 @@
 } */
 
 .touchcontrol {
-  position: fixed;
-  text-align: center;
-  bottom: 0;
-  right: 2%;
+text-align: center;
+background-size: contain;
+bottom: 0px;
+z-index: 4;
 }
 
 .controlenter {
