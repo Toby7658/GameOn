@@ -92,8 +92,9 @@ body {
 } */
 
 .touchcontrol {
+position: absolute;
+right: 2%;
 text-align: center;
-background-size: contain;
 bottom: 0px;
 z-index: 4;
 }
