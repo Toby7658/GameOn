@@ -1,11 +1,11 @@
 // block scoped variables for different items of the game
-let canvas = document.getElementById('canvas');
-let multiplyAlienGirl
-let moveAlienGirl
-let moveLaser
-let ship = document.getElementById('rocketship');
-let start = 1;
-let moveBy = 20;
+var canvas = document.getElementById('canvas');
+var multiplyAlienGirl;
+var moveAlienGirl;
+var moveLaser;
+var ship = document.getElementById('rocketship');
+var start = 1;
+var moveBy = 20;
 
 //function to startGame 
 function letsPlay() {
@@ -15,15 +15,6 @@ function letsPlay() {
 
 // sound for blast when alien is hit
 function playAudio(what) {
-  /*var sound = document.createElement("AUDIO");
-  sound.id='blast';  
-  sound.src      = '/assets/audio/blast.wav';
-  sound.type     = 'audio/wav ';
-  sound.autoplay = true;
-  canvas.appendChild(sound);
-  */
-
-
   if (what === "blast") {
     document.getElementById('blast').play();
   }
@@ -32,11 +23,11 @@ function playAudio(what) {
 // multiply aliens at random intervals using math.random
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
-    let alien = document.createElement("div");
+    var alien = document.createElement("div");
     alien.classList.add("aliengirl");
     alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // aliens fall width of screen
     canvas.appendChild(alien);
-  }, 2000)
+  }, 2000);
 }
 
 // score increases when aliens are hit
@@ -46,12 +37,12 @@ function updateScore() {
 
 function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
-  for (let i = 0; i < alienGirls.length; i++) {
+  for (var i = 0; i < alienGirls.length; i++) {
     if (parseInt(window.getComputedStyle(b).getPropertyValue("top")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) + 50
-    ) {
+    ); {
       playAudio('blast'); // alien blast sound
       alienGirls[i].remove(); // alien disappears when hit 
       b.remove(); // bullet disappears
@@ -81,7 +72,7 @@ function moveBullet(bull) {
     if (parseInt(window.getComputedStyle(bull).getPropertyValue("top")) > 30) {
       bull.style.top = parseInt(window.getComputedStyle(bull).getPropertyValue("top")) - 30 + 'px';
     } else {
-      bull.remove()
+      bull.remove();
     }
     kill(bull);
 
@@ -89,7 +80,7 @@ function moveBullet(bull) {
 }
 // function for bullet to leave top of ship as spacebar is pushed
 function shoot() {
-  let bullet = document.createElement("div");
+  var bullet = document.createElement("div");
   bullet.classList.add("laser");
   bullet.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + 10 + "px";
   bullet.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - 20 + "px";
@@ -103,7 +94,7 @@ function shoot() {
 function moveAlien() {
   moveAlienGirl = setInterval(() => {
     const alienGirls = document.getElementsByClassName("aliengirl");
-    for (let i = 0; i < alienGirls.length; i++) {
+    for (var i = 0; i < alienGirls.length; i++) {
       alienGirls[i].style.top = parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 30 + 'px';
 
       if (parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) > window.innerHeight - 100) {
@@ -187,4 +178,12 @@ window.addEventListener('keydown', (e) => {
       pressSpaceBar();
       break;
   }
-})
+});
+
+ /*var sound = document.createElement("AUDIO");
+  sound.id='blast';  
+  sound.src      = '/assets/audio/blast.wav';
+  sound.type     = 'audio/wav ';
+  sound.autoplay = true;
+  canvas.appendChild(sound);
+  */

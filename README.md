@@ -23,7 +23,7 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
     * [Game Characters](<#game-characters>)
 
 * [**Existing Features**](<#existing-features>)
-    * [Navigation Menu](<#navigation-menu>)
+    * [Keyboard Arrows](<#keyboard-arrows>)
 
 * [**Future Features**](<#future-features>)
 
@@ -158,6 +158,7 @@ arcade game. The characters, however, have been updated. The Heroship has been r
 more up-to-date rocketship and the alien invadors have been updated with an image of an alien in a spaceship.
 The bullets (laser) image provides a more impressive shooting experience, albeit, continues to be inkeeping
 with the arcade experience of the game.
+
 ![Rocketship](/assets/images/shipimage.png)
 ![Alienship](/assets/images/alienship.png)
 ![laser](/assets/images/bulletimage.png)
@@ -165,29 +166,37 @@ with the arcade experience of the game.
 ## Keyboard Arrows
 Tablet and phone screens are provided with touch screen buttons which allow the user
 to navigate and play the game without the use of a keyboard. The 'arrow buttons' are aligned to 
-the right, providing the user with directional movement, up, down, left, right, with use of their thumb.
+the right, providing the user with directional movement, up, down, left, right, with use of their right thumb.
 The left buttons, which consist of an 'enter button' and 'spacebar button', allows the user
 to start the game and shoot with the left thumb. The aim for this alignment, is to allow the user
 to play with minimum hand movement and maintain focus on the targets.
+
 ![Touch Screen Interaction](/assets/documentation/arrowkeys-mobile.png)
 
 ## Score
+The score element is aligned to the right of the logo and is a permanent fixture throughout the game.
+The user can see the score increase as they hit each alien with a bullet. The score will continue to
+increase for the duration of the game play.
+![score](/assets/documentation/score-image.png)
 
 [Back to top](<#Table-of-Contents>)
 
 ## Logo
+The logo is designed to be simple, yet memorable. In-keeping with arcade games of the past, the logo is made up of two short word choices that are intended to get an emotional reaction and evoke an energy to make a move.
+The Silkscreen font, coupled with a white colour, is intended to stand-out against the navy background, however,
+not to cause a distraction during game-play. The charaters of the game move behind the logo, to ensure visability
+of the logo.
 
-![Logo Image]()
+![Logo](assets/documentation/gameon-logo.png)
 
 [Back to top](<#Table-of-Contents>)
 
-## Hero Image
-
- [Back to top](<#Table-of-Contents>)
-
-
 ## Future Features
-
+Future features will include:
+* The game will be a multiplayer game.
+* The Rocketship (hero character) will have multiple lives before the game ends.
+* The user will have a choice of characters, aliens, rocketship, laser type, to choose from before play.
+* The user can change location (background), deep-space, earth sky, Mars sky, Venus sky.
 
 [Back to top](<#Table-of-Contents>)
 
@@ -206,7 +215,6 @@ to play with minimum hand movement and maintain focus on the targets.
   * [Visual Studio](https://visualstudio.microsoft.com/) -
   * [Youtube](https://www.youtube.com/) - 
   * [Code Institute](https://codeinstitute.net/ie/) - 
-  * [Google Images](https://images.google.com/) - 
   * [HTML CSS Color Picker](https://www.htmlcsscolor) - This site was accessed to assist with defining colour.
   * [Grammarly](https://app.grammarly.com/) - This site was used to complete a spell check throughout the site and readme file.
 
@@ -215,20 +223,18 @@ to play with minimum hand movement and maintain focus on the targets.
  
 ## Testing
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
-- [WebPageTest](https://www.webpagetest.org/)
 - [W3Markup Validation Service](https://validator.w3.org/)
 - [W3CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ## W3 Validation Results:
-* Game Page html - [Error Free Home Page]()
-* CSS - [Error Free CSS](/assets/images/documentation/error-free-css.jpg)
+* Game Page html - [Error Free Home Page](/assets/documentation/w3-error-removed.png)
+* CSS - [Error Free CSS](/assets/documentation/w3-css-errorfree.png)
 
 ## Lighthouse Testing Desktop Results:
-* Game Page Html - [Lighthouse Validation Home Page]()
+* Game Page Html - [Lighthouse Validation Home Page](/assets/documentation/lighthouse-mobile.png)
 
 ## Lighthouse Testing Mobile Results:
-* Game Page html - [Lighthouse Validation Home Page]()
-
+* Game Page html - [Lighthouse Validation Home Page](/assets/documentation/lighthouse-mobile.png)
 
 ## Webpagetest
 * Results - Passed
@@ -240,11 +246,14 @@ Firefox -
 [Back to top](<#Table-of-Contents>)
 
 ## Bugs and Errors
-1. The ALT text adds a text description to an image on a Web page, and should be used for all images, graphical bullets, and graphical horizontal rules. Initially, Alt was included in the video and map iframe, however, this brought the Lighthouse Validation score down and created errors within W3 Validator. Once this was removed, the score increased and W3 stated error free.
+1. When validating via W3 for HTML, the below warning appeared. This was resolved by removing the 'Type' 
+attribute for the JavaScript resource.
 
-![W3 Validator Error](./assets/images/documentation/error-w3-validator-alt.jpg)
+![W3 Validator Error](./assets/documentation/w3-warninghtml.png)
 
-![W3 Validator Error-Free](./assets/images/documentation/error-w3-validator-fixed.jpg)
+Result after removing 'Type' attribute:
+
+![W3 Validator Error-Free](./assets/documentation/w3-error-removed.png)
 
 2. Upon adding the back button on the submit page, the button became cut off when resizing to a smaller devise:
 
