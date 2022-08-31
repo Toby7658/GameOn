@@ -134,12 +134,21 @@ function moveLeft() {
   }
 } 
 
+// function moveRight() {
+//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy +
+//   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+//     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
+//   }
+// }
+
 function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy +
-  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + 0)
+  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width")) ;{
     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
   }
 }
+
+
 
 // function moveLeft() {
 //   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
@@ -156,11 +165,11 @@ function moveRight() {
 
 }*/
 
-function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
-    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
-  }
-}
+// function moveRight() {
+//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
+//     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
+//   }
+// }
 
 function moveUp() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0) {
