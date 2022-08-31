@@ -4,8 +4,8 @@ let multiplyAlienGirl;
 let moveAlienGirl;
 let moveLaser;
 let ship = document.getElementById('rocketship');
-let start = 1;
-let moveBy = 20;
+let start = 1; 
+let moveBy = 20; // amount of px I want to move my ship
 
 //function to startGame  
 function letsPlay() {
@@ -123,18 +123,42 @@ function moveAlien() {
 }
 
 // function for arrow buttons to direct movement of hero rocketship
+// get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
+// get style & property value ship width, less or = to css & default/property value of canvas width
+// set right position of ship = style of ship & propertyValue of right position + 20 + pixels
 
 function moveLeft() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
-    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy + 
+  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy + 'px';
+  }
+} 
+
+function moveRight() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
   }
 }
 
-function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100) {
+// function moveLeft() {
+//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
+//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
+//   }
+// }
+
+
+
+/*function moveRight() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth) {
     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
   }
 
+}*/
+
+function moveRight() {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
+  }
 }
 
 function moveUp() {
@@ -144,7 +168,7 @@ function moveUp() {
 }
 
 function moveDown() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100) {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight) {
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
   }
 }

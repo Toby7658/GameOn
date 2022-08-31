@@ -18,16 +18,10 @@
   <h1 class="header">Game On</h1>
 
   <!-- div created for splash text which disappears when press enter -->
-  <div id="splash">Press Enter to Start<br /><br />Press Arrow Keys to Move<br />Press Spacebar to Shoot</div>
+  <div id="splash">Press Enter to Start<br />
+  <br />Press Arrow Keys to Move<br />Press Spacebar to Shoot</div>
 
   <!-- div created for controls for arrow keys and touch screen -->
-
-  <!-- <div class="mobilecontrol">
-    <button onclick="moveUp()">&#8593;</button><br><br>
-    <button onclick="moveLeft()">&#8592;</button>
-     <button onclick="moveRight()">&#8594;</button><br><br>
-     <button onclick="moveDown()">&#8595;</button><br>
-  </div> -->
 
   <div class="touchcontrol">
     <button onclick="moveUp()">&#8593;</button><br><br>
@@ -41,20 +35,6 @@
     <button onclick="pressSpaceBar()">Spacebar</button><br><br>
   </div>
 
-
-
-  <!-- inactive icons to display arrow key direction for large screen
-  <div class="iconcontrol">
-    <i style='font-size:24px' class='fas'>&#xf35b;</i>
-  </br>
-</br>
-<i style='font-size:24px' class='fas'>&#xf359;</i>
-  <i style='font-size:24px' class='fas'>&#xf35a;</i>
-  </br>
-</br>
-  <i style='font-size:24px' class='fas'>&#xf0ab;</i>
-  </div> -->
-
   <!-- div created for hero rocketship -->
   <div id="rocketship"></div>
 
@@ -65,14 +45,8 @@
   <div id="score">0</div>
 
   <!-- audio music over game in a loop -->
-  <audio id="music"></audio>
+  <!-- <audio id="music"></audio> -->
 
-  <!-- audio created for blast sound at bullet impact on enemy -->
-  <!-- <audio id="start">
-    <source src="#" type="audio/mpeg">
-  </audio> -->
-
-  <!-- ************************************************************** -->
 
   <!-- audio created for blast sound at bullet impact on enemy -->
   <audio id="blast">
@@ -84,7 +58,7 @@
     <source src="assets/audio/gameover.mp3" type="audio/mpeg">
   </audio>
 
-  <script src="assets/js/index.js" type="text/javascript">
+  <script src="assets/js/index.js">
   </script>
 
 

@@ -80,15 +80,6 @@
 /* style for touch screen controls */
 
 
-/* .mobilecontrol {
-  display: flex;
-  position: fixed;
-  text-align: center;
-  right: 2%;
-  z-index: 4;
-  bottom: 0px;
-} */
-
 .touchcontrol {
 position: absolute;
 right: 2%;
