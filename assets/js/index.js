@@ -31,21 +31,22 @@ function playAudio(what) {
 // multiply aliens at random intervals using math.random
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
-    let alien = document.createElement("div")
-    alien.classList.add("aliengirl");
-    alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // aliens fall width of screen
-    canvas.appendChild(alien);
+    let alien = document.createElement("div") // created a new div element for alien
+    alien.classList.add("aliengirl"); // css classname & adds set of space separated tokens to the list
+    alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // left property of alien, same as, random numbers x width of screen
+    canvas.appendChild(alien);                                                       // minus width of alien + the set pixel size
   }, 2000);
-}
+} 
 
 // score increases when aliens are hit
 function updateScore() {
   document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
 
+//  For loops through a block of code a number of times
 function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
-  for (let i = 0; i < alienGirls.length; i++) {
+  for (let i = 0; i < alienGirls.length; i++) {  
     if (parseInt(window.getComputedStyle(b).getPropertyValue("top")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) &&
       parseInt(window.getComputedStyle(b).getPropertyValue("top")) <= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("top")) + 50 &&
       parseInt(window.getComputedStyle(b).getPropertyValue("left")) >= parseInt(window.getComputedStyle(alienGirls[i]).getPropertyValue("left")) &&
@@ -185,7 +186,7 @@ function pressSpaceBar() {
 }
 
 // function to activate controls via arrow tabs on keyboard
-// When listener hears arrow keys_ship moves as per key direction
+// When listener hears arrow keys, the ship moves as per key direction
 window.addEventListener('keydown', (e) => {
   switch (true) {
     case (e.key === 'ArrowLeft'):

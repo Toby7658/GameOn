@@ -298,7 +298,8 @@ By forking the GitHub Repository, a copy of the repository can be viewed or amen
 * Fwait.com *[Arrow Keys & EventListener](https://www.fwait.com/how-to-move-an-object-with-arrow-keys-in-javascript/)* - Used to learn how to move arrow keys.
 * StackOverflow *[document.getElementById](https://stackoverflow.com/questions/7396597/html-5-canvas-getelementbyid-returns-null-undefined)* - Used to learn about document.getElementById.
 *  StackOverflow *[LetsPlay Function](https://stackoverflow.com/questions/17200399/terminate-function-execution-using-confirm)* - Used to learn about function LetsPlay().
-*  W3School *[Variables and Evaluations](https://www.w3schools.com/js/js_syntax.asp)* - Assisted with creating variables and evaluation.
+*  W3School *[Variables and Evaluations](https://www.w3schools.com/js/js_syntax.asp)* - Assisted with creating and understanding variables.
+* W3School *[SetInterval](https://www.w3schools.com/jsref/met_win_setinterval.asp) - Used for functon to kill aliens.
 * Javapoint.com *[SetInterval](https://www.javatpoint.com/javascript-setinterval-method#:~:text=%E2%86%92%20%E2%86%90%20prev-,JavaScript%20setInterval()%20method,clearInterval()%20method%20is%20called)* - Assisted with setInterval for loop.
 * GeekForGeeks *[parseInt](https://www.geeksforgeeks.org/javascript-parseint-function/#:~:text=The%20parseInt()%20function%20is,number%20to%20a%20decimal%20number)* - Assisted with using parseInt() function.
 * W3School *[inner.HTML ](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)* - Assisted with learning syntax using InnerHTML.
@@ -306,26 +307,18 @@ By forking the GitHub Repository, a copy of the repository can be viewed or amen
 * W3School *[Game Tutorial](https://www.w3schools.com/graphics/game_images.asp)* - Used to learn about StartGame() function.
 * OpenGameArt.org *[Game Art](https://opengameart.org/art-search?keys=laser+bullet)* - Used to source character images for game.
 * W3School *[HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)* - Used to to get and change HTML elements.
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-*  *[]* - Used to learn about 
-
-
+* W3School *[Back-Ground Image Property](https://www.w3schools.com/cssref/pr_background-image.asp)* - Assisted with placing the background image.
+* GeeksForGeeks *[How to position a Div](https://www.geeksforgeeks.org/how-to-position-a-div-at-the-bottom-of-its-container-using-css/)* - Assited with positioning the ship at the bottom of the canvas.
+* Anycoding.com *[](https://www.anycodings.com/1questions/5070906/how-do-i-change-program-starting-from-starting-from-onload-to-starting-from-space-press)* - Assisted with eventListener for keyDown.
+* W3School *[Window getComputedStyle()](https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp)* - Assisted with understanding and usage. 
+* W3School *[Function to Start Game (letsPlay)](https://www.w3schools.com/graphics/tryit.asp?filename=trygame_component_position)* - Assisted with finding syntax to start the game.
+* MaxInterview *[Keyboard Event](https://maxinterview.com/code/on-spacebar-press-javascript-B50EE33D2AAEBC1/)* - Assisted with keyboard event.
+* StackOverflow *[Keyboard Event](https://stackoverflow.com/questions/24386354/execute-js-code-after-pressing-the-spacebar|)* - Assisted with keyboard event for spacebar.  
+* Grepper *[addeventlistener spacebar & arrowkeys](https://www.codegrepper.com/code-examples/javascript/addeventlistener+spacebar)* - Assisted with syntax for controls.
+* Medium.com *[Using switch(true) in JavaScript](https://medium.com/trabe/using-switch-true-in-javascript-986e8ad8ae4f)* - Assisted with syntax learning for eventListener keyDown. 
+* Mdn *[KeyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) - Assisted with syntax for keyDown eventListener.
+* StackOverflow *[Detecting Arrowkey Pressed](https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript) - Used syntax for event.key for controls.
 * Github *[Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)* - This information assisted with understanding the syntax of Markdown.
-
-
-
-
-
-
-
-
 
  [Back to top](<#Table-of-Contents>)
 
