@@ -122,7 +122,7 @@ function moveAlien() {
   }, 1000);
 }
 
-// function for arrow buttons to direct movement of hero rocketship
+// function for arrow buttons to direct movement of hero rocketship - moveLeft
 // get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
 // get style & property value ship width, less or = to css & default/property value of canvas width
 // set right position of ship = style of ship & propertyValue of right position + 20 + pixels
@@ -135,8 +135,9 @@ function moveLeft() {
 } 
 
 function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
-    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy +
+  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
   }
 }
 
