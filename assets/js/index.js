@@ -126,7 +126,7 @@ function moveAlien() {
 // get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
 // get style & property value ship width, less or = to css & default/property value of canvas width
 // set right position of ship = style of ship & propertyValue of right position + 20 + pixels
-
+// including canvas width so width will adapt as per canvas and not inputted number
 function moveLeft() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy + 
   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
@@ -134,45 +134,18 @@ function moveLeft() {
   }
 } 
 
-// function moveRight() {
-//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy +
-//   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
-//     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
-//   }
-// }
-
+// including canvas width within syntax for moveRight
 function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + 0)
-  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width")) ;{
-    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy +
+  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + "px";
   }
 }
 
 
-
-// function moveLeft() {
-//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
-//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
-//   }
-// }
-
-
-
-/*function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 100 <= window.innerWidth) {
-    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + 'px';
-  }
-
-}*/
-
-// function moveRight() {
-//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
-//     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
-//   }
-// }
-
 function moveUp() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 0) {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 
+  parseInt(window.getComputedStyle(ship).getPropertyValue("height")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) ;{
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
   }
 }
