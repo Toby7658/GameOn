@@ -201,21 +201,20 @@ Future features will include:
 [Back to top](<#Table-of-Contents>)
 
 ## Technologies Used
-  * [HTML](https://en.wikipedia.org/wiki/HTML5) - 
-  * [CSS](https://en.wikipedia.org/wiki/CSS) - 
-  * [Java Script](https://en.wikipedia.org/wiki/JavaScript) - 
-  * [Google Fonts](https://fonts.google.com/) - 
-  * [balsamiq](https://balsamiq.com/wireframesgclid=CjwKCAjwi8iXBhBeEiwAKbUoferdHodwIX8rhZQq6jDFB9i1ffpeC04Iv0ROTwgZLHrOEP1rmCqzjhoCUsMQAvD_BwE) - 
-  * [GitHub](https://github.com/about) - 
-  * [Git](https://git-scm.com/) - 
-  * [Gitpod](https://www.gitpod.io/) -
-  * [Adobe Color](https://color.adobe.com/create/color-wheel) - 
-  * [Gimp](https://www.gimp.org/) - 
-  * [Slack](https://slack.com/intl/en-ie/) - 
-  * [Visual Studio](https://visualstudio.microsoft.com/) -
-  * [Youtube](https://www.youtube.com/) - 
-  * [Code Institute](https://codeinstitute.net/ie/) - 
-  * [HTML CSS Color Picker](https://www.htmlcsscolor) - This site was accessed to assist with defining colour.
+  * [HTML](https://en.wikipedia.org/wiki/HTML5) - HTML the most basic building block of the Web. This is the main language used to develop the site. 
+  * [CSS](https://en.wikipedia.org/wiki/CSS) - CSS describes how HTML elements are to be displayed on screen. This has been used to develop the style of the site.
+  * [Java Script](https://en.wikipedia.org/wiki/JavaScript) - JavaScript was used for to creating dynamic and interactive content of the game.
+  * [Google Fonts](https://fonts.google.com/) - Google Fonts is a directory of font families which was incorporated during the development of the site.
+  * [balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwi8iXBhBeEiwAKbUoferdHodwIX8rhZQq6jDFB9i1ffpeC04Iv0ROTwgZLHrOEP1rmCqzjhoCUsMQAvD_BwE) - Balsamiq was used to create a mock-up wireframe for large and small screen devices.
+  * [GitHub](https://github.com/about) - Github is used to host the source code for the site.
+  * [Git](https://git-scm.com/) - Git is used to manage and keep track of the source code history throughout development. 
+  * [Gitpod](https://www.gitpod.io/) - Gitpod creates connections between Gitpod and GitHub accounts. Gitpod continuously builds git branches to facilitate the coding process.
+  * [Adobe Color](https://color.adobe.com/create/color-wheel) - Adobe Colour has been used to navigate colour charts for the site during development. 
+  * [Slack](https://slack.com/intl/en-ie/) - Slack was utilized by seeking advice and knowledge from students and mentors.
+  * [Visual Studio](https://visualstudio.microsoft.com/) - Visual Studio was used in the very early phase to practice Javscript prior to github.
+  * [Youtube](https://www.youtube.com/) - Youtube was ues to view multiple Javascript tutorials.
+  * [Code Institute](https://codeinstitute.net/ie/) - Influence taken for all Javascript from Love Math module available via the Programme Overview.
+  * [HTML CSS Color Picker](https://www.htmlcsscolor.com) - This site was accessed to assist with defining colour.
   * [Grammarly](https://app.grammarly.com/) - This site was used to complete a spell check throughout the site and readme file.
 
 
@@ -236,10 +235,6 @@ Future features will include:
 ## Lighthouse Testing Mobile Results:
 * Game Page html - [Lighthouse Validation Home Page](/assets/documentation/lighthouse-mobile.png)
 
-## Webpagetest
-* Results - Passed
-
-
 Chrome - 
 Firefox - 
 
@@ -254,34 +249,6 @@ attribute for the JavaScript resource.
 Result after removing 'Type' attribute:
 
 ![W3 Validator Error-Free](./assets/documentation/w3-error-removed.png)
-
-2. Upon adding the back button on the submit page, the button became cut off when resizing to a smaller devise:
-
-
-![Button back for mobile](./assets/images/documentation/error-submitmobile-cutoff.jpg)
-
-Issue was corrected by re-using the css for the contact page submit button:
-
-![Button back for mobile](./assets/images/documentation/error-submitmobile-fixed.jpg)
-
-3. When validating the Visit pages on Lighthouse, errors appeared for all iframes. It was noted that height and width 
-were set as a percentage and were coming up as an error. The height and width were changed to " " which solved the immediate issue. This then caused an issue with the map overlapping with the video upon decreasing the screen size. This issue was fixed by reducing the size of the map and video for a smoother transition when resizing.
-
-4. Github Error - When pushing commits to the repository, a warning appeared advising a file, core.3260 was too big. 
-I was unsure what this file was or where it came from. I researched online, however, this did not assist with understanding the problem. I reached out to the Stack Community and was advised it was cashed files. I undertook further research online and attempted to .gitignore, however, the file seemed to be stuck between a commit and a push.
-I was unable to resolve the issue so I completed a gitlog and went through commits to see where the issue arose. 
-I was then able to complete a gitreset --hardcode to the point where I would not lose vital information but be able to 
-go back to a point where I could again push commits. This issue was then resolved and I could commit and push commits as usual.
-
-## Learning
-* The need for "git status" is required to see what is waiting in line.
-* The need for "gitlog" to see and track all commits to date.
-* The need for "git add" as opposed to "git add ." to ensure I am committing what I need as opposed to all waiting in line.
-* The need for "git reset --hard code" - Only to be used with care so as not to lose valuable information. 
-* Keep the server down while saving changes as the server may be running other small programs in the background.
-
-![Github Error](./assets/images/documentation/error.jpg)
-
 
  [Back to top](<#Table-of-Contents>)
 
@@ -316,18 +283,38 @@ By forking the GitHub Repository, a copy of the repository can be viewed or amen
 ## Credits
 
 * Mentor support and guidance from *[Jack Wachira](https://github.com/iamjackwachira)*.
-
 * Facilitator and support from *[Kenan Wright](https://github.com/KenanCarlWright/KenanCarlWright)*.
 * Facilitator and support from *[Kasia Bogucka](https://github.com/bezebee)*.
-
-* W3C School CSS Tutorial *[W3C School CSS Tutorial](https://www.w3schools.com/css/)* - Used for additional learning around the over-all basics of CSS.
-
-
-
-* Linuxhint *[Linuxhint](https://linuxhint.com/html-meta-tag/)* - This assisted with gaining further knowledge around meta tags.s
+* W3C School JavaScript Tutorial *[W3C School JavaScript Tutorial](https://www.w3schools.com/js/default.asp)* - Used for additional learning around the over-all basics of JavaScript.
 * Markdown Guide *[Markdown Guide](https://www.markdownguide.org/basic-syntax/)* - This was used to understand the basic syntax for Markdown.
-* Youtube *[Youtube - ]()* - 
-
+* Youtube *[Space Shooter Game Tutorial](https://youtu.be/mwl95yvl-n0)* - This tutorial was used as a template to understand where to use the correct syntax - this was one of the main sources for creating the game.
+* Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/MCVU0w73uKI)* - Used to learn about different ways to create syntax.
+* Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/qCBiKJbLcFI)* - Used to learn what syntax to use.
+* Youtube *[Youtube - JavaScript Tutorial for beginners](https://www.youtube.com/watch?v=W6NZfCO5SIk)* - Used to learn about syntax throughout.
+* Youtube *[Youtube - Shooter Game Tutorial](https://youtu.be/gCa0z4B-CRo)* - Used to learn what syntax to use throughout.
+* Youtube *[Youtube - Javascript Animation](https://youtu.be/pyhb8Y9qKUI)* - Used to learn what syntax to use throughout.
+* Youtube *[Youtube - How to Shoot Bullets ](https://youtu.be/i7FzA4NavDs)* - Used to learn what syntax to use throughout.
+* Youtube *[Youtube - JavaScript from Scratch](https://youtu.be/fi4E40kOGGM)* - Used to learn what syntax to use throughout.
+* Fwait.com *[Arrow Keys & EventListener](https://www.fwait.com/how-to-move-an-object-with-arrow-keys-in-javascript/)* - Used to learn how to move arrow keys.
+* StackOverflow *[document.getElementById](https://stackoverflow.com/questions/7396597/html-5-canvas-getelementbyid-returns-null-undefined)* - Used to learn about document.getElementById.
+*  StackOverflow *[LetsPlay Function](https://stackoverflow.com/questions/17200399/terminate-function-execution-using-confirm)* - Used to learn about function LetsPlay().
+*  W3School *[Variables and Evaluations](https://www.w3schools.com/js/js_syntax.asp)* - Assisted with creating variables and evaluation.
+* Javapoint.com *[SetInterval](https://www.javatpoint.com/javascript-setinterval-method#:~:text=%E2%86%92%20%E2%86%90%20prev-,JavaScript%20setInterval()%20method,clearInterval()%20method%20is%20called)* - Assisted with setInterval for loop.
+* GeekForGeeks *[parseInt](https://www.geeksforgeeks.org/javascript-parseint-function/#:~:text=The%20parseInt()%20function%20is,number%20to%20a%20decimal%20number)* - Assisted with using parseInt() function.
+* W3School *[inner.HTML ](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)* - Assisted with learning syntax using InnerHTML.
+* TowardsDev *[SpaceShooter Game Tutorial](https://towardsdev.com/space-shooter-game-e48fbe04630a)* - Step by step how to Guide how to create a shooting game. 
+* W3School *[Game Tutorial](https://www.w3schools.com/graphics/game_images.asp)* - Used to learn about StartGame() function.
+* OpenGameArt.org *[Game Art](https://opengameart.org/art-search?keys=laser+bullet)* - Used to source character images for game.
+* W3School *[HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)* - Used to to get and change HTML elements.
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
+*  *[]* - Used to learn about 
 
 
 * Github *[Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)* - This information assisted with understanding the syntax of Markdown.

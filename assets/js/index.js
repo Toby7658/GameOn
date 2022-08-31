@@ -134,24 +134,39 @@ function moveLeft() {
   }
 } 
 
-// including canvas width within syntax for moveRight
 function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy +
-  parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
-    ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + "px";
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
   }
 }
 
+// function moveRight() {
+//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy +
+//   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
+//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + "px"
+//   }
+// }
+
+
+// function moveLeft() {
+//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
+//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
+//   }
+// }
+
+
+
 
 function moveUp() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 
-  parseInt(window.getComputedStyle(ship).getPropertyValue("height")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) ;{
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
+    parseInt(window.getComputedStyle(ship).getPropertyValue("top")); parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
   }
 }
 
 function moveDown() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight) {
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy >= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
+   parseInt(window.getComputedStyle(ship).getPropertyValue("top")); parseInt(window.getComputedStyle(canvas).getPropertyValue("top"))
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
   }
 }
@@ -168,7 +183,6 @@ function pressEnter() {
 function pressSpaceBar() {
   shoot();
 }
-
 
 // function to activate controls via arrow tabs on keyboard
 // When listener hears arrow keys_ship moves as per key direction
