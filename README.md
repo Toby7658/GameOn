@@ -255,7 +255,7 @@ Result after removing 'Type' attribute:
 ![W3 Validator Error-Free](./assets/documentation/w3-error-removed.png)
 
 2. When developing the control functions, the ship would not move. Upon learning more about console.log,
-I placed the line of code within the brackets and moved to DevTools. This brought up no errors but stated a value of '60px'in the console. I referred back to the syntax from my *[main-guide](https://github.com/learnmux/Space-Shooter-Game-Using-Javascript/blob/main/app.js)* and noted a missing 'parseInt'. Upon further reading around this, I could determin that this method parses a value as a string and returns the first integer. Upon including this and checking my console, the px was removed and only '60' remained. I then understood that '60' is the first interger. 
+I placed the line of code within the brackets and moved to DevTools. This brought up no errors but stated a value of '60px'in the console. I referred back to the syntax from my *[main-guide](https://github.com/learnmux/Space-Shooter-Game-Using-Javascript/blob/main/app.js)* and noted a missing 'parseInt'. Upon further reading around this, I could determin that this method parses a value as a string and returns the first integer. Upon including this and checking my console, the px was removed and only '60' remained. I then understood that '60' is the first interger befor pixel. 
 
 3. When validating JavaScript code in Jshint, multiple warnings advised '' is only available in ES6 (use 'esversion: 6').' Upon reaching out to Slack, I was advised to configure jshint to es6. Upon further research
 via *[SlackOverflow](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom)*, I included "/*jshint esversion: 6 */"
@@ -309,38 +309,40 @@ By forking the GitHub Repository, a copy of the repository can be viewed or amen
 11. W3School *[Back-Ground Image Property](https://www.w3schools.com/cssref/pr_background-image.asp)* - Assisted with placing the background image.
 12. W3School *[Window getComputedStyle()](https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp)* - Assisted with understanding and usage. 
 13. W3School *[Function to Start Game (letsPlay)](https://www.w3schools.com/graphics/tryit.asp?filename=trygame_component_position)* - Assisted with finding syntax to start the game.
-14. W3School *[Incrementing](https://www.w3schools.com/js/js_arithmetic.asp) - This assisted with learning how the increment operator (++) increments numbers.
-14. W3School *[The for loop](https://www.w3schools.com/js/js_loop_for.asp)* - Assisted with syntax for the kill function.
-15. Youtube *[Space Shooter Game Tutorial](https://youtu.be/mwl95yvl-n0)* - This tutorial was used as a template to understand where to use the correct syntax - this was one of the main sources for creating the game.
-14. Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/MCVU0w73uKI)* - Used to learn about different ways to create syntax. 
-15. Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/qCBiKJbLcFI)* - Used to learn what syntax to use.
-16. Youtube *[Youtube - JavaScript Tutorial for beginners](https://www.youtube.com/watch?v=W6NZfCO5SIk)* - Used to learn about syntax throughout.
-17. Youtube *[Youtube - Shooter Game Tutorial](https://youtu.be/gCa0z4B-CRo)* - Used to learn what syntax to use throughout.
-18. Youtube *[Youtube - Javascript Animation](https://youtu.be/pyhb8Y9qKUI)* - Used to learn what syntax to use throughout.
-19. Youtube *[Youtube - How to Shoot Bullets ](https://youtu.be/i7FzA4NavDs)* - Assisted with syntax to shoot laser.
-20. Youtube *[Youtube - JavaScript from Scratch](https://youtu.be/fi4E40kOGGM)* - Used to learn what syntax to use throughout.
-21. StackOverflow *[Keyboard Event](https://stackoverflow.com/questions/24386354/execute-js-code-after-pressing-the-spacebar|)* - Assisted with keyboard event for spacebar.  
-22. StackOverflow *[playAudio](https://stackoverflow.com/questions/9419263/how-to-play-audio)* - Assisted with syntax to play blast sound effect.
-23. StackOverflow *[document.getElementById](https://stackoverflow.com/questions/7396597/html-5-canvas-getelementbyid-returns-null-undefined)* - Used to learn about document.getElementById.
-24. StackOverflow *[LetsPlay Function](https://stackoverflow.com/questions/17200399/terminate-function-execution-using-confirm)* - Used to learn about function LetsPlay().
-25. StackOverflow *[Detecting Arrow-key Pressed](https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript)* - Used syntax for event.key for controls.
-26. StackOverflow *[Math.random/set-interval](https://stackoverflow.com/questions/46922915/javascript-setinterval-and-get-value-math-random)* Used for syntax understanding when aliens fall randomly from the top.
-27. Fwait.com *[Arrow Keys & EventListener](https://www.fwait.com/how-to-move-an-object-with-arrow-keys-in-javascript/)* - Used to learn how to move arrow keys.
-28. GeeksForGeeks *[How to position a Div](https://www.geeksforgeeks.org/how-to-position-a-div-at-the-bottom-of-its-container-using-css/)* - Assited with positioning the ship at the bottom of the canvas.
-29. GeekForGeeks *[parseInt](https://www.geeksforgeeks.org/javascript-parseint-function/#:~:text=The%20parseInt()%20function%20is,number%20to%20a%20decimal%20number)* - Assisted with using parseInt() function.
-30. Javapoint.com *[setInterval](https://www.javatpoint.com/javascript-setinterval-method#:~:text=%E2%86%92%20%E2%86%90%20prev-,JavaScript%20setInterval()%20method,clearInterval()%20method%20is%20called)* - Assisted with setInterval for loop.
-31. TowardsDev *[SpaceShooter Game Tutorial](https://towardsdev.com/space-shooter-game-e48fbe04630a)* - Step by step how to Guide how to create a shooting game. 
-31. Markdown Guide *[Markdown Guide](https://www.markdownguide.org/basic-syntax/)* - This was used to understand the basic syntax for Markdown.
-32. OpenGameArt.org *[Game Art](https://opengameart.org/art-search?keys=laser+bullet)* - Used to source character images for game.
-33. Anycoding.com *[Keydown eventListener](https://www.anycodings.com/1questions/5070906/how-do-i-change-program-starting-from-starting-from-onload-to-starting-from-space-press)* - Assisted with eventListener for keyDown.
-34. MaxInterview *[Keyboard-Event](https://maxinterview.com/code/on-spacebar-press-javascript-B50EE33D2AAEBC1/)* - Assisted with keyboard event.
-35. Grepper *[addeventlistener spacebar & arrow-keys](https://www.codegrepper.com/code-examples/javascript/addeventlistener+spacebar)* - Assisted with syntax for controls.
-36. Medium.com *[Using switch(true) in JavaScript](https://medium.com/trabe/using-switch-true-in-javascript-986e8ad8ae4f)* - Assisted with syntax learning for eventListener keyDown.
-37. Mdn *[KeyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)* - Assisted with syntax for keyDown eventListener.
-38. Mdn *[Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment) - This was used to understand how to increment a number in a div.
-38. Github *[Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)* - This information assisted with understanding the syntax of Markdown.
-39. 
-
+14. W3School *[Incrementing](https://www.w3schools.com/js/js_arithmetic.asp)* - This assisted with learning how the increment operator (++) increments numbers.
+15. W3School *[The for loop](https://www.w3schools.com/js/js_loop_for.asp)* - Assisted with syntax for the kill function.
+16. Youtube *[Space Shooter Game Tutorial](https://youtu.be/mwl95yvl-n0)* - This tutorial was used as a template to understand where to use the correct syntax - this was one of the main sources for creating the game.
+17. Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/MCVU0w73uKI)* - Used to learn about different ways to create syntax. 
+18. Youtube *[Youtube - Space Invaders Tutorial](https://youtu.be/qCBiKJbLcFI)* - Used to learn what syntax to use.
+19. Youtube *[Youtube - JavaScript Tutorial for beginners](https://www.youtube.com/watch?v=W6NZfCO5SIk)* - Used to learn about syntax throughout.
+20. Youtube *[Youtube - Shooter Game Tutorial](https://youtu.be/gCa0z4B-CRo)* - Used to learn what syntax to use throughout.
+21. Youtube *[Youtube - Javascript Animation](https://youtu.be/pyhb8Y9qKUI)* - Used to learn what syntax to use throughout.
+22. Youtube *[Youtube - How to Shoot Bullets ](https://youtu.be/i7FzA4NavDs)* - Assisted with syntax to shoot laser.
+23. Youtube *[Youtube - JavaScript from Scratch](https://youtu.be/fi4E40kOGGM)* - Used to learn what syntax to use throughout.
+24. StackOverflow *[Keyboard Event](https://stackoverflow.com/questions/24386354/execute-js-code-after-pressing-the-spacebar|)* - Assisted with keyboard event for spacebar.  
+25. StackOverflow *[playAudio](https://stackoverflow.com/questions/9419263/how-to-play-audio)* - Assisted with syntax to play blast sound effect.
+26. StackOverflow *[document.getElementById](https://stackoverflow.com/questions/7396597/html-5-canvas-getelementbyid-returns-null-undefined)* - Used to learn about document.getElementById.
+27. StackOverflow *[LetsPlay Function](https://stackoverflow.com/questions/17200399/terminate-function-execution-using-confirm)* - Used to learn about function LetsPlay().
+28. StackOverflow *[Detecting Arrow-key Pressed](https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript)* - Used syntax for event.key for controls.
+29. StackOverflow *[Math.random/set-interval](https://stackoverflow.com/questions/46922915/javascript-setinterval-and-get-value-math-random)* Used for syntax understanding when aliens fall randomly from the top.
+30. Fwait.com *[Arrow Keys & EventListener](https://www.fwait.com/how-to-move-an-object-with-arrow-keys-in-javascript/)* - Used to learn how to move arrow keys.
+31. GeeksForGeeks *[How to position a Div](https://www.geeksforgeeks.org/how-to-position-a-div-at-the-bottom-of-its-container-using-css/)* - Assited with positioning the ship at the bottom of the canvas.
+32. GeekForGeeks *[parseInt](https://www.geeksforgeeks.org/javascript-parseint-function/#:~:text=The%20parseInt()%20function%20is,number%20to%20a%20decimal%20number)* - Assisted with using parseInt() function.
+33. Javapoint.com *[setInterval](https://www.javatpoint.com/javascript-setinterval-method#:~:text=%E2%86%92%20%E2%86%90%20prev-,JavaScript%20setInterval()%20method,clearInterval()%20method%20is%20called)* - Assisted with setInterval for loop.
+34. TowardsDev *[SpaceShooter Game Tutorial](https://towardsdev.com/space-shooter-game-e48fbe04630a)* - Step by step how to Guide how to create a shooting game. 
+35. Markdown Guide *[Markdown Guide](https://www.markdownguide.org/basic-syntax/)* - This was used to understand the basic syntax for Markdown.
+36. OpenGameArt.org *[Game Art](https://opengameart.org/art-search?keys=laser+bullet)* - Used to source character images for game.
+37. Anycoding.com *[Keydown eventListener](https://www.anycodings.com/1questions/5070906/how-do-i-change-program-starting-from-starting-from-onload-to-starting-from-space-press)* - Assisted with eventListener for keyDown.
+38. MaxInterview *[Keyboard-Event](https://maxinterview.com/code/on-spacebar-press-javascript-B50EE33D2AAEBC1/)* - Assisted with keyboard event.
+39. Grepper *[addeventlistener spacebar & arrow-keys](https://www.codegrepper.com/code-examples/javascript/addeventlistener+spacebar)* - Assisted with syntax for controls. *(https://www.codegrepper.com - pls note - this site is down at time of writing this.)
+40. Medium.com *[Using switch(true) in JavaScript](https://medium.com/trabe/using-switch-true-in-javascript-986e8ad8ae4f)* - Assisted with syntax learning for eventListener keyDown.
+41. Mdn *[KeyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)* - Assisted with syntax for keyDown eventListener.
+42. Mdn *[Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)* - This was used to understand how to increment a number in a div.
+43. Mdn *[classList.Add](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)* - This assisted with syntax for bullet.
+44. Github *[Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)* - This information assisted with understanding the syntax of Markdown.
+45. StackOverflow *[.appendChild](https://stackoverflow.com/questions/42946559/my-canvas-wont-append)* - This assisted with function moveAlien.
+46. W3School *[Arithmetic Operators](https://www.w3schools.com/jsref/jsref_operators.asp)* - This was used to understand what each operator means.
+47. Medium.com *[Moving and Element](https://medium.com/@theredwillows/moving-an-element-with-javascript-part-1-765c6a083d45)
 
  [Back to top](<#Table-of-Contents>)
 
