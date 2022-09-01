@@ -102,6 +102,14 @@ which provides the user with a better experience as they progress through the ga
 * As a user, I want to hear sound effects as I hit characters.
 * As a user, I want a game that I can play on touch screen small devices.
 
+## User Experience
+* As a user, I experienced the visuals as retro and the game set in space.
+* As a user, I can move the spaceship and shoot aliens using the arrow keys and spacebar.
+* As a user, I can view my score throughout the play as it increases when I hit a target.
+* As a user, I experienced the game in a similar vein as the arcade game, Space Invaders.
+* As a user, I can hear the sound of the impact of a bullet hitting the alien.
+* As a user, I can access the game with my mobile device and use the touch screen controls to play.
+
 [Back to top](<#Table-of-Contents>)
 
 ## Wireframe
