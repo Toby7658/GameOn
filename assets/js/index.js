@@ -10,14 +10,14 @@ let start = 1;
 let moveBy = 20; // amount of px I want to move my ship
 
 //function to startGame  
-//see Readme credit line 13 for reference
+//see Readme credit line 15, 13, for reference
 function letsPlay() {
   moveAlien();
   multiplyAlien();
 }
 
 // sound for blast when alien is hit
-// see Readme credit line 22 for reference
+// see Readme credit line 15, 22, 23 for reference
 function playAudio(what) {
   if (what === "blast") {
     document.getElementById('blast').play();
@@ -26,7 +26,7 @@ function playAudio(what) {
 }
 
 // multiply aliens at random intervals using math.random
-// see Readme credit line 7 & 26 for reference
+// see Readme credit line 7, 15, 26 for reference
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div"); // created a new div element for alien
@@ -37,13 +37,13 @@ function multiplyAlien() {
 } 
 
 // score increases when aliens are hit
-// see Readme credit line 7, 8, 26 for reference
+// see Readme credit line 7, 8, 15, 26, 32 for reference
 function updateScore() {
   document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
 
-//  For loops through a block of code a number of times
-// see Readme credit line   for reference
+// for loops through a block of code a number of times
+// see Readme credit line 6, 14, 15, 25, 32 for reference
 function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
   for (let i = 0; i < alienGirls.length; i++) {  
@@ -60,20 +60,6 @@ function kill(b) {
   }
 }
 
-
-/*function moveBullet() {
-  moveLaser = setInterval(() => {
-   const bullets = document.getElementsByClassName("laser");
-   for (let i = 0; i < bullets.length; i++) {
-    if (parseInt(window.getComputedStyle(bullets[i]).getPropertyValue("top")) >  30) {
-      bullets[i].style.top = parseInt(window.getComputedStyle(bullets[i]).getPropertyValue("top")) - 30 + 'px';
-    } else {
-      bullets[i].remove()
-    }
-    kill(bullets[i]);
-  }
- }, 300);
-}*/
 
 // function for bullets to shoot at set interval directed by spacebar
 function moveBullet(bull) {
