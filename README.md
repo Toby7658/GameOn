@@ -95,12 +95,12 @@ which provides the user with a better experience as they progress through the ga
 [Back to top](<#Table-of-Contents>)
 
 ## User Stories
-* As a user, I want a retro game that that is set in space.
+* As a user, I want a retro game that is set in space.
 * As a user, I want to use my keyboard to direct the game hero character.
-* As a user, I want a game which scores points as I play and interact.
-* As a user, I want a game which is similiar to an old arcade game.
+* As a user, I want a game that scores points as I play and interact.
+* As a user, I want a game that is similar to an old arcade game.
 * As a user, I want to hear sound effects as I hit characters.
-* As a user, I want to a game that I can play on touch screen small devices.
+* As a user, I want a game that I can play on touch screen small devices.
 
 [Back to top](<#Table-of-Contents>)
 
@@ -130,9 +130,10 @@ The site is made up of one pages. It is constructed of the following languages:
 [Back to top](<#Table-of-Contents>)
 
 # Typography
- The font aim for this game is to provide a retro arcade vibe.
- The font chosen is Silkscreen for the arcade style font and Sans-serif as a fall-back
- should Silkscreen nolonger be available. Fonts were taken from [Google Fonts](https://fonts.google.com/).
+The font aim for this game is to provide a retro arcade vibe.
+ The font chosen is Silkscreen for the arcade style font and Sans-serif as a 
+ fallback should Silkscreen no longer be available. Fonts were taken from 
+ [Google Fonts](https://fonts.google.com/).
  ![Logo](assets/documentation/gameon-logo.png)
  ![Splash](assets/documentation/splash-typog.png)
 
@@ -140,8 +141,8 @@ The site is made up of one pages. It is constructed of the following languages:
 
 # Colour Scheme
 The colour scheme is inspired by the 1978 shooting game, Space Invaders. However, 
-the aim was not to copy the original game but to create a similar template which requires a simple colour scheme.
-The background [image](https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/) of a dark navy space with distant stars was used to replace the original black screen. The text remains the original #FFFFFF. The Alien character, which are originally white, has been replaced with an image of an alien in a spaceship. The heroship, which was originally green, has been replaced by an image of a [rocketship](https://opengameart.org/art-search?keys=laser&page=2). 
+the aim was not to copy the original game but to create a similar template that requires a simple colour scheme.
+The background [image](https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/) of a dark navy space with distant stars was used to replace the original black screen. The text remains the original #FFFFFF. The Alien character, which is originally white, has been replaced with an image of an alien in a spaceship. The heroship, which was originally green, has been replaced by an image of a [rocketship](https://opengameart.org/art-search?keys=laser&page=2). 
 The [bullets](https://opengameart.org/art-search?keys=laser&page=2) (or lasers) which shoot the aliens, is also an image used.
 
 The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/color-wheel) and [HTML CSS Color Picker](https://www.htmlcsscolor.com/).
@@ -155,8 +156,8 @@ The colour scheme was guided by [Adobe Color](https://color.adobe.com/create/col
 # Game Characters
 As discussed, the aim of this game was to provide a similar style to the original Space Invaders
 arcade game. The characters, however, have been updated. The Heroship has been replaced with a
-more up-to-date rocketship and the alien invadors have been updated with an image of an alien in a spaceship.
-The bullets (laser) image provides a more impressive shooting experience, albeit, continues to be inkeeping
+more up-to-date rocketship and the alien invaders have been updated with an image of an alien in a spaceship.
+The bullets (laser) image provides a more impressive shooting experience, albeit, continues to be in keeping
 with the arcade experience of the game.
 
 ![Rocketship](/assets/images/shipimage.png)
@@ -164,27 +165,24 @@ with the arcade experience of the game.
 ![laser](/assets/images/bulletimage.png)
 
 ## Keyboard Arrows
-Tablet and phone screens are provided with touch screen buttons which allow the user
-to navigate and play the game without the use of a keyboard. The 'arrow buttons' are aligned to 
-the right, providing the user with directional movement, up, down, left, right, with use of their right thumb.
-The left buttons, which consist of an 'enter button' and 'spacebar button', allows the user
-to start the game and shoot with the left thumb. The aim for this alignment, is to allow the user
-to play with minimum hand movement and maintain focus on the targets.
+Tablet and phone screens are provided with touch screen buttons that allow the user to navigate and play the game without the use of a keyboard. The 'arrow buttons' are aligned to 
+the right, providing the user with directional movement, up, down, left, and right, with the use of their right thumb.
+The left buttons, which consist of an 'enter button' and 'spacebar button, allow the user to start the game and shoot with the left thumb. This alignment aims to allow the user to play with minimum hand movement and maintain focus on the targets.
 
 ![Touch Screen Interaction](/assets/documentation/arrowkeys-mobile.png)
 
 ## Score
-The score element is aligned to the right of the logo and is a permanent fixture throughout the game.
+The scoring element is aligned to the right of the logo and is a permanent fixture throughout the game.
 The user can see the score increase as they hit each alien with a bullet. The score will continue to
-increase for the duration of the game play.
+increase for the duration of the gameplay.
 ![score](/assets/documentation/score-image.png)
 
 [Back to top](<#Table-of-Contents>)
 
 ## Logo
-The logo is designed to be simple, yet memorable. In-keeping with arcade games of the past, the logo is made up of two short word choices that are intended to get an emotional reaction and evoke an energy to make a move.
-The Silkscreen font, coupled with a white colour, is intended to stand-out against the navy background, however,
-not to cause a distraction during game-play. The charaters of the game move behind the logo, to ensure visability
+The logo is designed to be simple, yet memorable. In keeping with arcade games of the past, the logo is made up of two short word choices that are intended to get an emotional reaction and evoke energy to make a move.
+The Silkscreen font, coupled with white colour, is intended to stand out against the navy background, however,
+not to cause a distraction during gameplay. The characters of the game move behind the logo, to ensure visibility
 of the logo.
 
 ![Logo](assets/documentation/gameon-logo.png)
@@ -193,9 +191,9 @@ of the logo.
 
 ## Future Features
 Future features will include:
-* The game will be a multiplayer game.
+* The game will be multiplayer.
 * The Rocketship (hero character) will have multiple lives before the game ends.
-* The user will have a choice of characters, aliens, rocketship, laser type, to choose from before play.
+* The user will have a choice of characters, aliens, rocketship, and laser type, to choose from before play.
 * The user can change location (background), deep-space, earth sky, Mars sky, Venus sky.
 
 [Back to top](<#Table-of-Contents>)
@@ -255,9 +253,9 @@ Result after removing 'Type' attribute:
 ![W3 Validator Error-Free](./assets/documentation/w3-error-removed.png)
 
 2. When developing the control functions, the ship would not move. Upon learning more about console.log,
-I placed the line of code within the brackets and moved to DevTools. This brought up no errors but stated a value of '60px'in the console. I referred back to the syntax from my *[main-guide](https://github.com/learnmux/Space-Shooter-Game-Using-Javascript/blob/main/app.js)* and noted a missing 'parseInt'. Upon further reading around this, I could determin that this method parses a value as a string and returns the first integer. Upon including this and checking my console, the px was removed and only '60' remained. I then understood that '60' is the first interger befor pixel. 
+I placed the line of code within the brackets and moved to DevTools. This brought up no errors but stated a value of '60px'in the console. I referred back to the syntax from my *[main-guide](https://github.com/learnmux/Space-Shooter-Game-Using-Javascript/blob/main/app.js)* and noted a missing 'parseInt'. Upon further reading around this, I could determine that this method parses a value as a string and returns the first integer. Upon including this and checking my console, the px was removed and only '60' remained. I then understood that '60' is the first integer before the pixel. 
 
-3. When validating JavaScript code in Jshint, multiple warnings advised '' is only available in ES6 (use 'esversion: 6').' Upon reaching out to Slack, I was advised to configure jshint to es6. Upon further research
+3. When validating JavaScript code in Jshint, multiple warnings advised that '' is only available in ES6 (use 'esversion: 6').' Upon reaching out to Slack, I was advised to configure jshint to es6. Upon further research
 via *[SlackOverflow](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom)*, I included "/*jshint esversion: 6 */"
 within my JS file and this removed the warnings. 
 
