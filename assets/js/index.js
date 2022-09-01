@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 // block scoped variables for different items of the game
 let canvas = document.getElementById('canvas');
 let multiplyAlienGirl;
@@ -8,30 +10,26 @@ let start = 1;
 let moveBy = 20; // amount of px I want to move my ship
 
 //function to startGame  
+//see Readme credit line 13 for reference
 function letsPlay() {
   moveAlien();
   multiplyAlien();
 }
 
 // sound for blast when alien is hit
+// see Readme credit line 22 for reference
 function playAudio(what) {
   if (what === "blast") {
     document.getElementById('blast').play();
 
-     /*var sound = document.createElement("AUDIO");
-  sound.id='blast';  
-  sound.src      = '/assets/audio/blast.wav';
-  sound.type     = 'audio/wav ';
-  sound.autoplay = true;
-  canvas.appendChild(sound);
-  */
   }
 }
 
 // multiply aliens at random intervals using math.random
+// see Readme credit line 7 & 26 for reference
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
-    let alien = document.createElement("div") // created a new div element for alien
+    let alien = document.createElement("div"); // created a new div element for alien
     alien.classList.add("aliengirl"); // css classname & adds set of space separated tokens to the list
     alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // left property of alien, same as, random numbers x width of screen
     canvas.appendChild(alien);                                                       // minus width of alien + the set pixel size
@@ -39,11 +37,13 @@ function multiplyAlien() {
 } 
 
 // score increases when aliens are hit
+// see Readme credit line 7, 8, 26 for reference
 function updateScore() {
   document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
 
 //  For loops through a block of code a number of times
+// see Readme credit line   for reference
 function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
   for (let i = 0; i < alienGirls.length; i++) {  
@@ -123,8 +123,9 @@ function moveAlien() {
   }, 1000);
 }
 
-// function for arrow buttons to direct movement of hero rocketship - moveLeft
-// get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
+// function for arrow buttons to direct movement of hero rocketship
+
+// if a specified condition is true get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
 // get style & property value ship width, less or = to css & default/property value of canvas width
 // set right position of ship = style of ship & propertyValue of right position + 20 + pixels
 // including canvas width so width will adapt as per canvas and not inputted number
@@ -133,41 +134,25 @@ function moveLeft() {
   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy + 'px';
   }
-} 
+}  
 
+// if a specified condition is true get style & property value of ship right value minus 20 (moveBy) is greater or equal to 0
+// the style right value is the same as the computed style & property of ship minus 20 plus pixcel
 function moveRight() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
-    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px"
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy  >=  0) {
+    ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
   }
 }
 
-// function moveRight() {
-//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy +
-//   parseInt(window.getComputedStyle(ship).getPropertyValue("width")) >= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
-//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) + moveBy + "px"
-//   }
-// }
-
-
-// function moveLeft() {
-//   if (parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy >= 0) {
-//     ship.style.left = parseInt(window.getComputedStyle(ship).getPropertyValue("left")) - moveBy + 'px';
-//   }
-// }
-
-
-
-
 function moveUp() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
-    parseInt(window.getComputedStyle(ship).getPropertyValue("top")); parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))
+    parseInt(window.getComputedStyle(ship).getPropertyValue("top")); parseInt(window.getComputedStyle(canvas).getPropertyValue("height"));
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
   }
 }
 
 function moveDown() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy >= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
-   parseInt(window.getComputedStyle(ship).getPropertyValue("top")); parseInt(window.getComputedStyle(canvas).getPropertyValue("top"))
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 100 <= window.innerHeight) {
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) + moveBy + 'px';
   }
 }
