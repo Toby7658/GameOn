@@ -1,5 +1,8 @@
 /*jshint esversion: 6 */
 
+// reference 16, 17, 18 on readme credits were used as main sources for developing this game
+
+
 // block scoped variables for different elements of the game
 let canvas = document.getElementById('canvas');
 let multiplyAlienGirl;
