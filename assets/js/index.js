@@ -10,14 +10,12 @@ let start = 1;
 let moveBy = 20; // amount of px I want to move my ship
 
 //function to startGame  
-//see Readme credit line 15, 13, for reference
 function letsPlay() {
   moveAlien();
   multiplyAlien();
 }
 
 // sound for blast when alien is hit
-// see Readme credit line 15, 25, 46 for reference
 function playAudio(what) {
   if (what === "blast") {
     document.getElementById('blast').play();
@@ -26,7 +24,6 @@ function playAudio(what) {
 }
 
 // multiply aliens at random intervals using math.random
-// see Readme credit line 7, 15, 17, 29, 43, 45 for reference
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div"); // created a new div element for alien
@@ -37,13 +34,11 @@ function multiplyAlien() {
 }
 
 // score increases when aliens are hit
-// see Readme credit line 8, 15, 26, 32 for reference
 function updateScore() {
   document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
 
 // for loops through a block of code a number of times
-// see Readme credit line 6, 14, 15, 25, 32 for reference
 function kill(b) {
   const alienGirls = document.getElementsByClassName("aliengirl");
   for (let i = 0; i < alienGirls.length; i++) {
@@ -61,7 +56,6 @@ function kill(b) {
 }
 
 // function for bullets to shoot at set interval directed by spacebar
-// see Readme credit line 7, 15, 33 for reference
 function moveBullet(bull) {
   moveLaser = setInterval(() => {
     if (parseInt(window.getComputedStyle(bull).getPropertyValue("top")) > 30) {
@@ -74,7 +68,6 @@ function moveBullet(bull) {
   }, 100);
 }
 // function for bullet to leave top of ship as spacebar is pushed
-// see Readme credit line 7, 12, 15, 43, 45 for reference
 function shoot() {
   let bullet = document.createElement("div");
   bullet.classList.add("laser");
@@ -87,7 +80,6 @@ function shoot() {
 }
 
 // function for alien to move from top to bottom of screen
-// see Readme credit line 15, 42 for reference
 function moveAlien() {
   moveAlienGirl = setInterval(() => {
     const alienGirls = document.getElementsByClassName("aliengirl");
@@ -99,7 +91,6 @@ function moveAlien() {
         el.setAttribute('id', 'splash');
 
         // at game end_ clear to start again when enter is pressed
-        // see Readme credit line 15, 17, 41 for reference
         el.innerHTML = 'GAME OVER<br/>Press Enter to Restart';
         document.getElementById('gameover').play(); // sound when game is over
         canvas.appendChild(el);
@@ -112,13 +103,7 @@ function moveAlien() {
   }, 1000);
 }
 
-// function for arrow buttons to direct movement of hero rocketship
-// if a specified condition is true get style & property value of ship (css & default) & (right side of ship) + 20 (moveBy)
-// get style & property value ship width, less or = to css & default/property value of canvas width
-// set right position of ship = style of ship & propertyValue of right position + 20 + pixels
-// including canvas width so width will adapt as per canvas and not inputted number
-
-// see Readme credit line 15, 39 for reference
+// functions to move elements in each direction
 function moveLeft() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy +
     parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
@@ -127,7 +112,10 @@ function moveLeft() {
 }
 
 // if a specified condition is true get style & property value of ship right value minus 20 (moveBy) is greater or equal to 0
-// the style right value is the same as the computed style & property of ship minus 20 plus pixcel
+// if style right value is the same as the computed style & property of ship minus 20 plus pixcel
+
+// function to move right the ship using the current (at that point in time) value of the property "right" - 20 px. 
+// this will  happen only if the condition in the if statement is true, which checks whether the move wil go out of the canvas
 function moveRight() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy >= 0) {
     ship.style.right = parseInt(window.getComputedStyle(ship).getPropertyValue("right")) - moveBy + "px";
@@ -136,9 +124,7 @@ function moveRight() {
 
 function moveUp() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 
-    parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
-    // parseInt(window.getComputedStyle(ship).getPropertyValue("top"));
-    // parseInt(window.getComputedStyle(canvas).getPropertyValue("height"));
+    parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {;
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
   }
 }
@@ -164,7 +150,7 @@ function pressSpaceBar() {
 
 // function to activate controls via arrow tabs on keyboard
 // When listener hears arrow keys, the ship moves as per key direction
-// see Readme credit line 15, 17, 24, 30 for reference
+// set to true as is a multi function
 window.addEventListener('keydown', (e) => {
   switch (true) {
     case (e.key === 'ArrowLeft'):

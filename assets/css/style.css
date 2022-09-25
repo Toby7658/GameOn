@@ -78,8 +78,6 @@
 }
 
 /* style for touch screen controls */
-
-
 .touchcontrol {
 position: absolute;
 right: 2%;
@@ -97,15 +95,6 @@ z-index: 4;
   bottom: 0;
 }
 
-/* style inactive arrow icons for large screen */
-/* .iconcontrol {
-  position: absolute;
-  margin: 10px;
-  bottom: 0px;
-  left: 2%;
-  z-index: 3;
-  text-align: center;
-} */
 
 /* media queries for devises with max width of 480px */
 
@@ -137,13 +126,6 @@ z-index: 4;
     font-size: 30px;
     top: 0px;
   }
-
-  /* .mobilecontrol {
-    position: fixed;
-    text-align: center;
-    left: 2%;
-    bottom: 20px;
-  } */
 
   .touchcontrol {
     bottom: 20px;
@@ -191,13 +173,6 @@ z-index: 4;
   #score {
     font-size: 30px;
   }
-
-  /* .mobilecontrol {
-    position: fixed;
-    text-align: center;
-    right: 2%;
-    bottom: 20px;
-  } */
 
   .touchcontrol {
     bottom: 20px;
