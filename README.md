@@ -17,6 +17,7 @@ Link to live site - [Game On](https://toby7658.github.io/gameon/)
     * [User Interaction](<#user-interaction>)
     * [User Stories](<#user-stories>)
     * [User Experience](<#user-experience>)
+    * [User Expectation](<#user-expectation>)
     * [Wireframe](<#wireframe>)
     * [Code Structure of Site](<#code-structure-of-site>)
     * [Typography](<#typography>)
@@ -110,6 +111,13 @@ which provides the user with a better experience as they progress through the ga
 * As a user, I experienced the game in a similar vein as the arcade game, Space Invaders.
 * As a user, I can hear the sound of the impact of a bullet hitting the alien.
 * As a user, I can access the game with my mobile device and use the touch screen controls to play.
+
+## User Expectations
+* As a user, I expect a game that is easy to navigate with controls.
+* As a user, I expect a game that will play until my hero is beaten.
+* As a user, I expect a game that clearly shows a score as I play.
+* As a user, I expect a game that encourages me to beat my last score.
+* As a user, I expect to easily differentiate the enemy from the hero.
 
 [Back to top](<#Table-of-Contents>)
 
