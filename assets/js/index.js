@@ -30,7 +30,7 @@ function playAudio(what) {
 function multiplyAlien() {
   multiplyAlienGirl = setInterval(() => {
     let alien = document.createElement("div"); // created a new div element for alien
-    alien.classList.add("aliengirl"); // css classname & adds set of space separated tokens to the list
+    alien.classList.add("aliengirl"); // css classname & adds set of space separated tokens to the list (list of class names of an element)
     alien.style.left = Math.floor(Math.random() * (window.innerWidth - 100)) + "px"; // left property of alien, same as, random numbers x width of screen
     canvas.appendChild(alien); // minus width of alien + the set pixel size
   }, 2000);
@@ -118,7 +118,7 @@ function moveAlien() {
 // set right position of ship = style of ship & propertyValue of right position + 20 + pixels
 // including canvas width so width will adapt as per canvas and not inputted number
 
-// see Readme credit line 15, 39,  for reference
+// see Readme credit line 15, 39 for reference
 function moveLeft() {
   if (parseInt(window.getComputedStyle(ship).getPropertyValue("right")) + moveBy +
     parseInt(window.getComputedStyle(ship).getPropertyValue("width")) <= parseInt(window.getComputedStyle(canvas).getPropertyValue("width"))) {
@@ -135,9 +135,10 @@ function moveRight() {
 }
 
 function moveUp() {
-  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
-    parseInt(window.getComputedStyle(ship).getPropertyValue("top"));
-    parseInt(window.getComputedStyle(canvas).getPropertyValue("height"));
+  if (parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy >= 
+    parseInt(window.getComputedStyle(canvas).getPropertyValue("height"))) {
+    // parseInt(window.getComputedStyle(ship).getPropertyValue("top"));
+    // parseInt(window.getComputedStyle(canvas).getPropertyValue("height"));
     ship.style.top = parseInt(window.getComputedStyle(ship).getPropertyValue("top")) - moveBy + 'px';
   }
 }
